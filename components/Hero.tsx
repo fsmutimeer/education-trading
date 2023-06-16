@@ -1,11 +1,12 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import {FaGalacticRepublic,FaRegHandshake} from "react-icons/fa"
+import {FaGalacticRepublic,FaLaptop,FaRegHandshake} from "react-icons/fa"
 import {GiBrain, GiLadder} from "react-icons/gi"
 const Hero = () => {
   return (
     <div>
-      {/* Landing page */}
+      {/* Page 1 */}
     <div className="top-0 bg-[url('/bg.svg')]  h-screen bg-cover bg-no-repeat bg-center bg-fixed flex items-center space-y-0">
       <div className="flex container mx-auto  w-[80%] items-center gap-6 p-4 ">
         {/* Left */}
@@ -24,7 +25,7 @@ const Hero = () => {
           </div>
       </div>
     </div>
-     {/* Objective  */}
+     {/* Page 2  */}
      <div className="mx-auto flex-col bg-slate-800 h-screen w-full">
       <div className="w-[80%] mx-auto flex-col justify-center items-center text-center ">
           {/* Title */}
@@ -72,6 +73,43 @@ const Hero = () => {
           </div>
       </div>
      </div>
+
+     {/* Page 3 */}
+     <div className="mx-auto flex justify-between bg-slate-800 h-screen w-full">
+      <div className="w-[80%] mx-auto flex-col gap-8">
+        <div className="flex">
+         <div className="w-[50%]"> 
+           <Image 
+           alt='laptop image'
+           src='/laptop.png'
+           height={350}
+           width={350}/>
+         </div>
+         <div className="w-[50%]"> 
+         <h2 className='text-white text-4xl pt-4'>The <span className='text-orange-400' >Archive</span></h2>
+         <p className='text-white text-xl pt-4'>
+Introducing <span className='text-orange-400' >The Archive</span>, a dashboard that includes all of our collective knowledge placed in a structured video format.</p>
+         </div>
+        </div>
+        <div className="flex pt-8 mt-8 gap-12 space-x-2 space-y-8">
+         <div className="w-[50%]"> 
+         <h2 className='text-white text-4xl pt-4'>Weekly  <span className='text-orange-400' >Mastery </span>Network Meet-Up</h2>
+         <p className='text-white text-xl pt-4'>
+Introducing Introducing The Archive, your ultimate destination for accessing the latest trading content and resources. Here, you can stay upated on all the latest happenings, gain a strong understanding of technical analysis, and learn essential mindset and market fundamentals to help you become a successful trader.</p>
+         </div>
+         <div className="w-[50%]"> 
+           <Image 
+           alt='image here'
+           src='/mulberies.jpg'
+           height={1000}
+           width={1000}/>
+         </div>
+        </div>
+         
+      </div>
+     </div>
+
+     {/*  End tage of main container */}
     </div>
   )
 }
