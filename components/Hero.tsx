@@ -25,7 +25,7 @@ const Hero = () => {
       </div>
     </div>
      {/* Objective  */}
-     <div className="container mx-auto flex-col bg-slate-800">
+     <div className="mx-auto flex-col bg-slate-800 h-screen w-full">
       <div className="w-[80%] mx-auto flex-col justify-center items-center text-center ">
           {/* Title */}
           <div className="pt-[4rem]">
