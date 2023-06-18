@@ -255,6 +255,25 @@ const Hero = () => {
           </div>
         </div>
       </div>
+        {/* Page 8  */}
+        <div className="flex-col bg-slate-800 h-screen w-screen flex-wrap">
+        <div className=" container mx-auto w-[80%]  flex-col  ">
+          {/* Title */}
+          <div className="pt-[4rem] mx-auto text-center w-[40%] ">
+            <h2 className="text-white text-5xl pt-4">
+            Plans
+            </h2>
+            <div className="flex justify-center items-center]">
+              <div className="bg-slate-500 h-[1.5px] w-[27em] my-4 "></div>
+            </div>
+            <p className='text-slate-300'>You decide your  <span className="text-orange-400 mr-2">Journey</span> Ahead.</p>
+          </div>
+          {/* Cards */}
+          <div className=" flex gap-16 flex-wrap w-[80%] pt-8 mx-auto justify-center items-center">
+    
+          </div>
+        </div>
+      </div>
       {/*  End tage of main container */}
     </div>
   );
