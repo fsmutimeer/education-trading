@@ -444,7 +444,7 @@ const Hero = () => {
               </div>
               <div className="flex justify-center">
                 <button className="text-xl uppercase text-orange-400  p-4">
-                  Join Now
+                  SECURE SPOT
                 </button>
               </div>
             </div>
