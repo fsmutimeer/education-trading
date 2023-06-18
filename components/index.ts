@@ -2,10 +2,14 @@ import Hero from "./Hero";
 import Nav from "./Nav";
 import Logo from "./Logo";
 import Container from "./Container";
+import Card from "./Card";
+import Footer from './Footer';
 
 export{
   Hero,
   Nav,
   Logo,
-  Container
+  Container,
+  Card,
+  Footer
 }
