@@ -34,7 +34,7 @@ const Hero = () => {
         </div>
       </div>
       {/* Page 2  */}
-      <div className="mx-auto flex-col bg-slate-800 h-auto w-full">
+      <div className="mx-auto flex-col bg-slate-800 h-[972px] w-full">
         <div className="w-[80%] mx-auto flex-col flex-wrap justify-center items-center text-center ">
           {/* Title */}
           <div className="pt-[4rem]">
@@ -94,7 +94,7 @@ const Hero = () => {
       </div>
 
       {/* Page 3 */}
-      <div className="flex justify-between bg-slate-800 h-auto w-full">
+      <div className="flex justify-between bg-slate-800 h-[972px] w-full">
         <div className="container mx-auto w-[80%] flex-col gap-8">
           <div className="flex">
             <div className="w-[50%]">
@@ -143,7 +143,7 @@ const Hero = () => {
       </div>
 
       {/* Page 4  */}
-      <div className="flex-col bg-slate-800 h-auto w-screen ">
+      <div className="flex-col bg-slate-800 h-[972px] w-screen ">
         <div className=" container mx-auto w-[80%]  flex-col  ">
           <div className="flex pt-8  gap-12 space-x-2">
             <div className="w-[50%]">
@@ -172,7 +172,7 @@ const Hero = () => {
               Where <span className="text-orange-400 mr-2">Real</span>Meets
               <span className="text-orange-400 ml-2">Real</span>
             </h2>
-            <div className="flex justify-center items-center]">
+            <div className="flex justify-center flex-wrap items-center]">
               <div className="bg-slate-500 h-[1.5px] w-[27em] my-4 "></div>
             </div>
           </div>
@@ -193,7 +193,7 @@ const Hero = () => {
         </div>
       </div>
       {/* Page 5  */}
-      <div className="flex-col bg-slate-800 h-auto w-screen flex-wrap">
+      <div className="flex-col bg-slate-800 h-[972px] w-screen flex-wrap">
         <div className=" container mx-auto w-[80%]  flex-col  ">
           {/* Title */}
           <div className="pt-[4rem] text-center">
