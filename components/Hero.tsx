@@ -451,6 +451,74 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      {/* Page 9  */}
+      <div className="flex-col bg-slate-800 h-auto w-screen flex-wrap">
+        <div className=" container mx-auto w-[80%]  flex-col  ">
+          {/* Title */}
+          <div className="pt-[4rem] mx-auto text-center w-[40%] ">
+            <h2 className="text-white text-4xl pt-4 p-4">
+              Here's what our{' '}
+              <span className="text-orange-400 mr-2">Network</span>have to say.
+            </h2>
+          </div>
+          {/* Cards */}
+          <div className=" flex gap-16 flex-wrap w-[80%] pt-8 mx-auto justify-between items-center">
+            {' '}
+            <div className="h-[10rem] w-[17rem] bg-slate-300 rounded-[2rem]"></div>
+            <div className="h-[10rem] w-[17rem] bg-slate-300 rounded-[2rem]"></div>
+            <div className="h-[10rem] w-[17rem] bg-slate-300 rounded-[2rem]"></div>
+            <div className="h-[10rem] w-[17rem] bg-slate-300 rounded-[2rem]"></div>
+            <div className="h-[10rem] w-[17rem] bg-slate-300 rounded-[2rem]"></div>
+            <div className="h-[10rem] w-[17rem] bg-slate-300 rounded-[2rem]"></div>
+          </div>
+        </div>
+      </div>
+      {/* Page 10  */}
+      <div className="flex-col bg-slate-800 h-[972px] w-screen flex-wrap">
+        <div className=" container mx-auto w-[80%]  flex-col  ">
+          {/* Title */}
+          <div className="pt-[4rem] mx-auto text-center w-[40%] ">
+            <h2 className="text-white text-4xl pt-4 p-4">
+              <span className="text-orange-400 mr-2">Live</span>Recorded Trades
+            </h2>
+          </div>
+          {/* Cards */}
+          <div className=" flex gap-16 flex-wrap w-[80%] pt-8 mx-auto justify-between items-center">
+            {' '}
+            <div className="h-[10rem] w-[17rem] bg-slate-300 rounded-[2rem]"></div>
+            <div className="h-[10rem] w-[17rem] bg-slate-300 rounded-[2rem]"></div>
+            <div className="h-[10rem] w-[17rem] bg-slate-300 rounded-[2rem]"></div>
+          </div>
+        </div>
+      </div>
+      {/* Page 11  */}
+      <div className="flex-col bg-slate-800 h-[972px] w-screen">
+        <div className=" container mx-auto w-[100%] flex gap-8 ">
+          {/* Left */}
+          <div className="flex bg-slate-400 w-[80%] ">
+            {/* Header */}
+            <div className="flex bg-red-500 gap-8">
+              <div className="flex">
+                {/* Image */}
+                <h6>Approach 1</h6>
+                <h5>Week 3 / Liquidty Types</h5>
+                {/* Title */}
+              </div>
+              <div className="flex">
+                {' '}
+                <button className="pt-2 p-4 bg-slate-50 text-slate-600">
+                  Homework
+                </button>
+              </div>
+            </div>
+            {/* Video tag*/}
+            {/* Overview and desc tag */}
+            {/* Resource tage */}
+          </div>
+          {/* Right */}
+          <div className="flex bg-slate-700 w-[30%]">right</div>
+        </div>
+      </div>
       {/*  End tage of main container */}
     </div>
   );
