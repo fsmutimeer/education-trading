@@ -25,9 +25,9 @@ const Nav = () => {
     <div className="w-full top-0 left-0 right-0  flex h-[76px] z-30 bg-slate-800">
       <nav className="container mx-auto w-[80%]   sticky flex justify-center items-center pt-[1rem] ">
         {/* Logo */}
-        <Link href="/" className="">
+        {/* <Link href="/" className="">
           <Logo />
-        </Link>
+        </Link> */}
         {/* Title */}
         <Link href="/">
           <Image src="/logowithttr.jpg" width={95} height={95} alt="ttr logo" />
@@ -44,7 +44,10 @@ const Nav = () => {
               </Link>
             </li>
           ))}
-          <Link href='/login' className="tracking-widest text-md border bg-white px-4 py-1 text-slate-950 rounded-lg hover:bg-slate-300 hover:text-white">
+          <Link
+            href="/login"
+            className="tracking-widest text-md border bg-white px-4 py-1 text-slate-950 rounded-lg hover:bg-slate-300 hover:text-white"
+          >
             LOGIN
           </Link>
         </ul>
