@@ -3,7 +3,7 @@ import { FaCheckCircle, FaPlay } from 'react-icons/fa';
 import { FiCircle } from 'react-icons/fi';
 import { BiLockAlt } from 'react-icons/bi';
 
-const Accordion = (props) => {
+const Accordion = (props:any) => {
   const [item, setItem] = useState(props.datas);
   const handleToggle = () => {
     let activeNow = item.active === 1 ? 0 : 1;
