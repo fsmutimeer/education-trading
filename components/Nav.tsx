@@ -44,9 +44,9 @@ const Nav = () => {
               </Link>
             </li>
           ))}
-          <button className="tracking-widest text-md border bg-white px-4 py-1 text-slate-950 rounded-lg hover:bg-slate-300 hover:text-white">
+          <Link href='/login' className="tracking-widest text-md border bg-white px-4 py-1 text-slate-950 rounded-lg hover:bg-slate-300 hover:text-white">
             LOGIN
-          </button>
+          </Link>
         </ul>
       </nav>
     </div>
