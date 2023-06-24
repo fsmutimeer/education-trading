@@ -40,9 +40,9 @@ const Hero = () => {
             <h1 className="text-4xl text-white py-2">A new Era Beckons.</h1>
             <div className="bg-white h-[4px] w-[15em] my-4"></div>
             <div className="py-8">
-              <button className="px-4 py-2 text-md text-slate-950 bg-orange-500 rounded-lg cursor-pointer">
+              <Link href="/join" className="px-4 py-2 text-md text-slate-950 bg-orange-500 rounded-lg cursor-pointer">
                 JOIN NOW
-              </button>
+              </Link>
             </div>{' '}
           </div>
           {/* Right */}
