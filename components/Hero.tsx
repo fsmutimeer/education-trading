@@ -511,7 +511,7 @@ const Hero = () => {
       </div>
       {/* Page 11  */}
       <div className="flex-col bg-slate-800 h-auto w-screen">
-        <div className=" container mx-auto w-[80%] flex gap-8 ">
+        <div className=" container  mx-auto w-[80%] flex gap-8  ">
           {/* Left */}
           <div className="flex w-[70%] flex-wrap">
             <div className="flex justify-between items-center w-[100%] flex-wrap">
