@@ -1,5 +1,4 @@
 "use client"
-import Meta from "./Meta";
 import Hero from "./Hero";
 import Nav from "./Nav";
 import Logo from "./Logo";
@@ -10,7 +9,6 @@ import Accordion from "./Accordion";
 
 
 export{
-  Meta,
   Hero,
   Nav,
   Logo,
