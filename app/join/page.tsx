@@ -204,7 +204,7 @@ const join = () => {
             </h2>
           </div>
           {/* Cards */}
-          <div className=" flex gap-16 flex-wrap w-[80%] pt-8 mx-auto justify-between items-center pb-8">
+          <div className=" flex flex-wrap gap-y-8 w-[100%] pt-8 mx-auto justify-evenly items-center pb-8">
             {' '}
             <div className="h-[10rem] w-[17rem] bg-slate-300 rounded-[2rem]"></div>
             <div className="h-[10rem] w-[17rem] bg-slate-300 rounded-[2rem]"></div>
