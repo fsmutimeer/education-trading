@@ -1,7 +1,7 @@
 import { Logo } from '@/components';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 const menu = [
   {
     title: 'home',
@@ -23,15 +23,20 @@ const menu = [
 
 const Nav = () => {
   const [nav, setNav] = useState(false);
+  useEffect(() => {
+    const changeBackground = () => {
+      if (window.scrollY >= 80) {
+        setNav(true);
+      } else {
+        setNav(false);
+      }
+    };
+    window.addEventListener('scroll', changeBackground);
+    return () => {
+      window.removeEventListener('scroll', changeBackground);
+    };
+  }, [nav]);
 
-  const changeBackground = () => {
-    if (window.scrollY >= 76) {
-      setNav(true);
-    } else {
-      setNav(false);
-    }
-  };
-  window.addEventListener('scroll', changeBackground);
   return (
     <div
       className={
