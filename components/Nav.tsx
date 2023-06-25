@@ -41,19 +41,19 @@ const Nav = () => {
     <div
       className={
         nav
-          ? 'bg-slate-800 w-full sticky top-0 left-0 right-0  flex h-[80px] z-30 '
+          ? 'bg-[#1F2125] w-full sticky top-0 left-0 right-0  flex h-[80px] z-30 border-b-2 border-gray-600 '
           : 'w-full sticky top-0 left-0 right-0  flex h-[80px] z-30 bg-transparent '
       }
     >
       <nav className="container mx-auto w-[80%]   flex justify-center items-center pt-[1rem] ">
         {/* Logo */}
-        {/* <Link href="/" className="">
+        <Link href="/" className="">
           <Logo />
-        </Link> */}
-        {/* Title */}
-        <Link href="/">
-          <Image src="/logowithttr.jpg" width={95} height={95} alt="ttr logo" />
         </Link>
+        {/* Title */}
+        {/* <Link href="/">
+          <Image src="/logowithttr.jpg" width={95} height={95} alt="ttr logo" />
+        </Link> */}
         {/* Navigatin Menu */}
         <ul className="flex gap-6 list-none text-gray-200 ml-auto ">
           {menu.map((ele) => (

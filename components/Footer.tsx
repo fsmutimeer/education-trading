@@ -5,7 +5,7 @@ import { FaInstagram, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-900 text-center text-white">
+    <footer className="bg-[#1F2125] text-center text-white border-t-2 border-t-gray-600">
       <div className="container  mx-auto pt-6 justify-between w-[80%] ">
         {/* <div className="grid md:grid-cols-2 lg:grid-cols-4 mx-auto"> */}
         <div className="flex mx-auto justify-between ">
@@ -49,7 +49,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="p-4 text-center bg-slate-900 flex justify-start items-end w-[60%]">
+          <div className="p-4 text-center bg-[#1F2125] flex justify-start items-end w-[60%]">
             Copyright © 2023
             <a className="text-white" href="https://tailwind-elements.com/">
               The Trading Room

@@ -1,12 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
-import {
-  FaCheck,
-  FaGalacticRepublic,
-  FaPlus,
-  FaRegHandshake,
-} from 'react-icons/fa';
+import { FaGalacticRepublic, FaRegHandshake } from 'react-icons/fa';
 import { MdOutlineDownloading } from 'react-icons/md';
 import { GiBrain, GiLadder } from 'react-icons/gi';
 import { Accordion, Card } from '@/components';
@@ -40,7 +35,10 @@ const Hero = () => {
             <h1 className="text-4xl text-white py-2">A new Era Beckons.</h1>
             <div className="bg-white h-[4px] w-[15em] my-4"></div>
             <div className="py-8">
-              <Link href="/join" className="px-4 py-2 text-md text-slate-950 bg-orange-500 rounded-lg cursor-pointer">
+              <Link
+                href="/join"
+                className="px-4 py-2 text-md text-slate-950 bg-orange-500 rounded-lg cursor-pointer"
+              >
                 JOIN NOW
               </Link>
             </div>{' '}
@@ -52,7 +50,7 @@ const Hero = () => {
         </div>
       </div>
       {/* Page 2  */}
-      <div className="mx-auto flex-col bg-slate-800 h-[972px] w-full">
+      <div className="mx-auto flex-col bg-[#1F2125] h-[972px] w-full">
         <div className="w-[80%] mx-auto flex-col flex-wrap justify-center items-center text-center ">
           {/* Title */}
           <div className="pt-[4rem]">
@@ -112,7 +110,7 @@ const Hero = () => {
       </div>
 
       {/* Page 3 */}
-      <div className="flex justify-between bg-slate-800 h-[972px] w-full">
+      <div className="flex justify-between bg-[#1F2125] h-[972px] w-full">
         <div className="container mx-auto w-[80%] flex-col gap-8">
           <div className="flex">
             <div className="w-[50%]">
@@ -161,7 +159,7 @@ const Hero = () => {
       </div>
 
       {/* Page 4  */}
-      <div className="flex-col bg-slate-800 h-[972px] w-screen ">
+      <div className="flex-col bg-[#1F2125] h-[972px] w-screen ">
         <div className=" container mx-auto w-[80%]  flex-col  ">
           <div className="flex pt-8  gap-12 space-x-2">
             <div className="w-[50%]">
@@ -211,7 +209,7 @@ const Hero = () => {
         </div>
       </div>
       {/* Page 5  */}
-      <div className="flex-col bg-slate-800 h-[972px] w-screen flex-wrap">
+      <div className="flex-col bg-[#1F2125] h-[972px] w-screen flex-wrap">
         <div className=" container mx-auto w-[80%]  flex-col  ">
           {/* Title */}
           <div className="pt-[4rem] text-center">
@@ -235,7 +233,7 @@ const Hero = () => {
         </div>
       </div>
       {/* Page 6  */}
-      <div className="flex-col bg-slate-800 h-auto w-screen flex-wrap">
+      <div className="flex-col bg-[#1F2125] h-auto w-screen flex-wrap">
         <div className=" container mx-auto w-[80%]  flex-col  ">
           {/* Title */}
           <div className="pt-[4rem] text-center">
@@ -258,7 +256,7 @@ const Hero = () => {
         </div>
       </div>
       {/* Page 7  */}
-      <div className="flex-col bg-slate-800 h-auto w-screen flex-wrap">
+      <div className="flex-col bg-[#1F2125] h-auto w-screen flex-wrap">
         <div className=" container mx-auto w-[80%]  flex-col  ">
           {/* Title */}
           <div className="pt-[4rem] mx-auto text-center w-[40%] ">
@@ -279,31 +277,9 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    
-      {/* Page 9  */}
-      <div className="flex-col bg-slate-800 h-auto w-screen flex-wrap">
-        <div className=" container mx-auto w-[80%]  flex-col  ">
-          {/* Title */}
-          <div className="pt-[4rem] mx-auto text-center w-[40%] ">
-            <h2 className="text-white text-4xl pt-4 p-4">
-              Here's what our{' '}
-              <span className="text-orange-400 mr-2">Network</span>have to say.
-            </h2>
-          </div>
-          {/* Cards */}
-          <div className=" flex gap-16 flex-wrap w-[80%] pt-8 mx-auto justify-between items-center">
-            {' '}
-            <div className="h-[10rem] w-[17rem] bg-slate-300 rounded-[2rem]"></div>
-            <div className="h-[10rem] w-[17rem] bg-slate-300 rounded-[2rem]"></div>
-            <div className="h-[10rem] w-[17rem] bg-slate-300 rounded-[2rem]"></div>
-            <div className="h-[10rem] w-[17rem] bg-slate-300 rounded-[2rem]"></div>
-            <div className="h-[10rem] w-[17rem] bg-slate-300 rounded-[2rem]"></div>
-            <div className="h-[10rem] w-[17rem] bg-slate-300 rounded-[2rem]"></div>
-          </div>
-        </div>
-      </div>
+
       {/* Page 10  */}
-      <div className="flex-col bg-slate-800 h-[972px] w-screen flex-wrap">
+      <div className="flex-col bg-[#1F2125] h-[972px] w-screen flex-wrap">
         <div className=" container mx-auto w-[80%]  flex-col  ">
           {/* Title */}
           <div className="pt-[4rem] mx-auto text-center w-[40%] ">
@@ -321,7 +297,7 @@ const Hero = () => {
         </div>
       </div>
       {/* Page 11  */}
-      <div className="flex-col bg-slate-800 h-auto w-screen">
+      <div className="flex-col bg-[#1F2125] h-auto w-screen">
         <div className=" container  mx-auto w-[80%] flex gap-8  ">
           {/* Left */}
           <div className="flex w-[70%] flex-wrap">
