@@ -32,7 +32,7 @@ const Hero = () => {
   return (
     <div>
       {/* Page 1 */}
-      <div className="top-0 bg-[url('/bg.svg')]  h-[972px] bg-cover bg-no-repeat bg-center bg-fixed flex items-center">
+      <div className="top-0 bg-[url('/bg.png')]  h-[972px] bg-cover bg-no-repeat bg-center bg-fixed flex items-center">
         <div className="flex container mx-auto flex-wrap w-[80%] items-center gap-6 p-4 ">
           {/* Left */}
           <div className=" gap-8 flex-col w-[38%] h-[100%]">
