@@ -361,11 +361,11 @@ const Hero = () => {
             <div className="flex flex-wrap justify-between w-[60%] mt-6 mb-6">
               <div className="flex flex-col gap-2">
                 <h4 className="text-white text-xl">Resources</h4>
-                <div className="flex bg-slate-900 h-[3rem] w-[10rem] rounded-md"></div>
+                <div className="flex bg-[#2C2F34] h-[3rem] w-[10rem] rounded-md"></div>
               </div>
               <div className="flex flex-col gap-2">
                 <h4 className="text-white text-xl">Downloads</h4>
-                <div className="flex bg-slate-900 h-[3rem] w-[100%] rounded-md">
+                <div className="flex bg-[#2C2F34] h-[3rem] w-[100%] rounded-md">
                   <div className="flex justify-center items-center p-4">
                     <h4 className="text-slate-300 pt-5 pb-5 p-4">
                       Lesson 1-PDF.zip

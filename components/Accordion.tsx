@@ -19,7 +19,7 @@ const Accordion = (props: any) => {
         <button
           onClick={handleToggle}
           className="flex items-center gap-2 w-full p-4
-        group-[.is-active]:font-bold duration-500 cursor-pointer rounded-md bg-gray-900"
+        group-[.is-active]:font-bold duration-500 cursor-pointer rounded-md bg-[#2C2F34]"
         >
           <span className="flex justify-center items-center text-md font-bold rounded-full bg-slate-50 text-slate-700 w-8 h-8">
             1
