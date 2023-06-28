@@ -6,7 +6,7 @@ import Container from "./Container";
 import Card from "./Card";
 import Footer from './Footer';
 import Accordion from "./Accordion";
-
+import TimeLine from "./TimeLine";
 
 export{
   Hero,
@@ -15,5 +15,6 @@ export{
   Container,
   Card,
   Footer,
-  Accordion
+  Accordion,
+  TimeLine
 }

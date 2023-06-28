@@ -1,3 +1,4 @@
+import { TimeLine } from '@/components';
 import Image from 'next/image';
 import React from 'react';
 
@@ -11,8 +12,7 @@ const about = () => {
           </h2>
         </div>
       </div>
-      {/* Page 3 */}
-      <div className="flex justify-between bg-[#1F2125] h-[972px] w-full">
+      <div className="flex justify-between bg-[#1F2125] h-auto w-full">
         <div className="container mx-auto w-[80%] flex-col gap-8">
           <div className="flex">
             <div className="w-[50%]">
@@ -44,6 +44,13 @@ const about = () => {
           <div className="flex pt-8 mt-8 gap-12 space-x-2 space-y-8"></div>
         </div>
       </div>
+      <div className="bg-[#1F2125] w-full">
+        <div className="container w-[80%] mx-auto text-white">
+        <TimeLine />
+        </div>
+     
+      </div>
+       
     </>
   );
 };
