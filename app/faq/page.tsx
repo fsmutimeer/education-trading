@@ -16,7 +16,7 @@ const faqs = () => {
         <div className="flex flex-wrap pt-[6rem] mx-auto justify-start items-start  p-[5rem] pb-8">
           <h2 className="text-white text-5xl pt-4 p-2">
             Frequently Asked Questions
-          </h2>
+          </h2> 
           <p className="text-slate-300 text-md p-2">
             Quick answers to questions you may have. Can't find what you're
             looking for? DM us on instagram @thetradingroom8
