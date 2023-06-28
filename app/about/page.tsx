@@ -18,7 +18,7 @@ const about = () => {
             <div className="w-[50%]">
               <Image
                 alt="about image"
-                src="/about.jpg"
+                src="/about.JPG"
                 height={350}
                 width={550}
               />
