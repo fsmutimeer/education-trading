@@ -193,17 +193,15 @@ const join = () => {
           </div>
         </div>
       </div>
-      {/* Page 9  */}
-      <div className="flex-col bg-[#1F2125] h-auto w-screen flex-wrap">
+      {/* <div className="flex-col bg-[#1F2125] h-auto w-screen flex-wrap">
         <div className=" container mx-auto w-[80%]  flex-col  ">
-          {/* Title */}
+
           <div className="pt-[4rem] mx-auto text-center w-[40%] ">
             <h2 className="text-white text-4xl pt-4 p-4">
               Here's what our{' '}
               <span className="text-orange-400 mr-2">Network</span>have to say.
             </h2>
           </div>
-          {/* Cards */}
           <div className=" flex flex-wrap gap-y-8 w-[100%] pt-8 mx-auto justify-evenly items-center pb-8">
             {' '}
             <div className="h-[10rem] w-[17rem] bg-slate-300 rounded-[2rem]"></div>
@@ -214,7 +212,7 @@ const join = () => {
             <div className="h-[10rem] w-[17rem] bg-slate-300 rounded-[2rem]"></div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
