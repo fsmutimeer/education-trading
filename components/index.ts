@@ -7,6 +7,7 @@ import Card from "./Card";
 import Footer from './Footer';
 import Accordion from "./Accordion";
 import TimeLine from "./TimeLine";
+import FaqAccordion from "./FaqAccordion";
 
 export{
   Hero,
@@ -16,5 +17,6 @@ export{
   Card,
   Footer,
   Accordion,
-  TimeLine
+  TimeLine,
+  FaqAccordion
 }
