@@ -12,7 +12,7 @@ const about = () => {
           </h2>
         </div>
       </div>
-      <div className="flex justify-between bg-[#1F2125] h-auto w-full">
+      <div className="flex justify-between bg-[#1F2125] h-auto w-full pt-24">
         <div className="container mx-auto w-[80%] flex-col gap-8">
           <div className="flex">
             <div className="w-[50%]">
@@ -23,8 +23,8 @@ const about = () => {
                 width={550}
               />
             </div>
-            <div className="w-[50%]">
-              <h2 className="text-white text-4xl pt-4">
+            <div className="w-[50%] pl-2">
+              <h2 className="text-white text-3xl pt-4">
                 <span className="text-orange-400">More</span> than just a
                 Community.
               </h2>
@@ -46,11 +46,9 @@ const about = () => {
       </div>
       <div className="bg-[#1F2125] w-full">
         <div className="container w-[80%] mx-auto text-white">
-        <TimeLine />
+          <TimeLine />
         </div>
-     
       </div>
-       
     </>
   );
 };
