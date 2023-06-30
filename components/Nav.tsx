@@ -23,7 +23,7 @@ const menu = [
 ];
 
 const Nav = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -92,14 +92,21 @@ const Nav = () => {
         </nav>
       </div>
       {isOpen && (
-        <div className="md:hidden absolute  bg-[#2C2F34] w-screen h-auto transition duration-500 ease-in-out">
-          <ul className=" flex flex-col gap-4 p-8 items-center list-none text-gray-200  ">
+        <div className="md:hidden bg-[#2C2F34] absolute inset-y-0 w-full z-30">
+          <div className="flex justify-end p-8">
+            <RiCloseFill
+              onClick={toggleMenu}
+              className="h-[30px] w-[30px] text-white cursor-pointer transition duration-500 ease-in-out"
+            />
+          </div>
+
+          <ul className=" flex flex-col gap-4 p-8 justify-center items-center  list-none text-gray-200  ">
             {menu.map((ele) => (
               <li key={ele.title}>
                 <Link
                   onClick={toggleMenu}
                   href={ele.route.toLowerCase()}
-                  className=" py-4 px-4 tracking-widest text-sm font-normal border-b-[1px] border-gray-400"
+                  className="block py-4 px-4 tracking-widest text-sm font-normal border-b-[1px] border-gray-400"
                 >
                   {ele.title.toUpperCase()}
                 </Link>
