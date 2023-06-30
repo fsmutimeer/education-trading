@@ -106,6 +106,7 @@ const Nav = () => {
               </li>
             ))}
             <Link
+              onClick={toggleMenu}
               href="/login"
               className="py-2 px-4 max-w-xs text-sm  border bg-white  text-slate-950 rounded-lg"
             >
