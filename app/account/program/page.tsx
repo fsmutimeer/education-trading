@@ -1,30 +1,30 @@
-import React, {useState} from 'react';
-import { Accordion } from "@/components";
-import Image from "next/image";
+'use client';
+import React, { useState } from 'react';
+import { Accordion } from '@/components';
+import Image from 'next/image';
 
 export default function Program() {
-
-    const [list, setList] = useState([
-      {
-        title: 'Introduction',
-        active: 1,
-      },
-      {
-        title: 'Introduction',
-      },
-      {
-        title: 'Introduction',
-      },
-      {
-        title: 'Introduction',
-      },
-      {
-        title: 'Introduction',
-      },
-    ]);
-    return (
+  const [list, setList] = useState([
+    {
+      title: 'Introduction',
+      active: 1,
+    },
+    {
+      title: 'Introduction',
+    },
+    {
+      title: 'Introduction',
+    },
+    {
+      title: 'Introduction',
+    },
+    {
+      title: 'Introduction',
+    },
+  ]);
+  return (
     <>
-        <div className="flex-col bg-[#1F2125] h-auto pb-8 w-screen">
+      <div className="flex-col bg-[#1F2125] h-auto pb-8 w-screen">
         <div className=" container  mx-auto w-[80%] flex gap-8  ">
           {/* Left */}
           <div className="flex w-[70%] flex-wrap">
