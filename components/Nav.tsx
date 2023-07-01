@@ -53,7 +53,7 @@ const Nav = () => {
             : 'w-full sticky top-0 left-0 right-0  flex h-[80px] z-30 bg-transparent '
         }
       >
-        <nav className="container mx-auto w-[80%] flex md: justify-between lg:justify-center items-center pt-[1rem] ">
+        <nav className="container mx-auto w-full md:w-[80%] flex md: justify-between lg:justify-center items-center pt-[1rem] ">
           {/* Logo */}
           <Link href="/" className="">
             <Logo />
@@ -82,11 +82,7 @@ const Nav = () => {
             </Link>
           </ul>
           <button className="md:hidden " onClick={toggleMenu}>
-            {isOpen ? (
-              <RiCloseFill className="h-[30px] w-[30px] text-white cursor-pointer transition duration-500 ease-in-out" />
-            ) : (
-              <RxHamburgerMenu className="h-[30px] w-[30px] text-white cursor-pointer transition duration-500 ease-in-out" />
-            )}
+            <RxHamburgerMenu className="h-[30px] w-[30px] text-white cursor-pointer transition duration-500 ease-in-out" />
           </button>
           {/* modile screen */}
         </nav>
