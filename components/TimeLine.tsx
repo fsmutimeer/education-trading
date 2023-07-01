@@ -37,7 +37,7 @@ const PhaseElement = (props: PhaseProps) => {
 const TimeLine = () => {
   return (
     <div className="w-full max-w-3xl mx-auto">
-      <div className="ml-[8rem] space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:ml-[8.75rem] md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+      <div className="ml-12 md:ml-[8rem] space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:ml-[8.75rem] md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
         <PhaseElement
           phase="Phase I"
           title="INITIATION INTO THE TRADING ROOM."
