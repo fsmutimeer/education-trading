@@ -21,7 +21,7 @@ const PhaseElement = (props: PhaseProps) => {
           </h4>
         </div>
 
-        <div className=" ml-14 flex gap-4 w-[50%] md:w-[100%]">
+        <div className=" ml-14 flex gap-4 w-[60%] md:w-[100%]">
           {props.icon}
           <h4 className="text-orange-400 ">{props.title}</h4>
         </div>
