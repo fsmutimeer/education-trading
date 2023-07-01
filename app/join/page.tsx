@@ -27,7 +27,7 @@ const join = () => {
             {/* Card one */}
             <div
               style={cardStyle}
-              className="flex-col  border-r-1 p-6 border-r-[1px] border-r-gray-500"
+              className="flex-col   md:border-r-1 p-6 md:border-r-[1px] md:border-r-gray-500"
             >
               <div className="flex-col justify-center items-center text-center">
                 <h4 className="text-white text-3xl p-2">Quarterly</h4>
@@ -89,7 +89,7 @@ const join = () => {
             {/* Card two */}
             <div
               style={cardStyle}
-              className="flex-col  border-r-1 p-6 border-r-[1px] border-r-gray-500"
+              className="flex-col  md:border-r-1 p-6 md:border-r-[1px] md:border-r-gray-500"
             >
               <div className="flex-col justify-center items-center text-center">
                 <h5 className="text-orange-400">MOST POPULAR</h5>
