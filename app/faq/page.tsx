@@ -49,8 +49,8 @@ const faqs = () => {
   return (
     <div className="flex-col bg-[#1F2125] h-auto w-screen flex-wrap">
       <div className=" container mx-auto w-[80%]  flex-col  ">
-        <div className="flex flex-wrap pt-[6rem] mx-auto justify-start items-start  p-[5rem] pb-8">
-          <h2 className="text-white text-5xl pt-4 p-2">
+        <div className="flex flex-wrap pt-[6rem] mx-auto justify-start items-start p-4 md:p-[5rem] pb-8">
+          <h2 className="text-white text-4xl md:text-5xl pt-12 p-2">
             Frequently Asked Questions
           </h2>
           <p className="text-slate-300 text-md p-2">
@@ -59,7 +59,7 @@ const faqs = () => {
           </p>
         </div>
         {/* The Accordion here */}
-        <div className="flex flex-wrap gap-y-3 gap-x-3 justify-start items-start  p-[5rem] pt-1">
+        <div className="flex flex-wrap gap-y-3 gap-x-3 justify-start items-start p-4 md:p-[5rem] pt-1">
           {items.map((item, index) => (
             <FaqAccordion items={item} key={index} />
           ))}
