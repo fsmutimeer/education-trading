@@ -10,14 +10,14 @@ const FaqAccordion = (props: any) => {
   };
   return (
     <div
-      className={`flex flex-col mx-auto mb-5 w-[350px] md:w-[400px] group ${
+      className={`flex flex-col mx-auto mb-5 w-[330px] md:w-[400px] group ${
         item.active === 1 ? 'is-active' : ''
       }`}
     >
       <div>
         <button
           onClick={handleToggle}
-          className="flex justify-between items-center p-[10px] pt-0 pb-0 w-[350px] md:w-[400px] "
+          className="flex justify-between items-center p-[10px] pt-0 pb-0 w-[330px] md:w-[400px] "
         >
           <div className="flex justify-between items-center gap-2 bg-[#2C2F34] p-2 rounded-lg ">
             {item.icon}
