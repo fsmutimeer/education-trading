@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Accordion } from '@/components';
 import Image from 'next/image';
+import { MdOutlineDownloading } from 'react-icons/md';
 
 export default function Program() {
   const [list, setList] = useState([
