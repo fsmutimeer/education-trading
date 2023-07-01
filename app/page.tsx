@@ -2,13 +2,11 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Accordion, Card, Hero } from '@/components';
+import { Card, Hero } from '@/components';
 import { FaGalacticRepublic, FaRegHandshake } from 'react-icons/fa';
-import { MdOutlineDownloading } from 'react-icons/md';
 import { GiBrain, GiLadder } from 'react-icons/gi';
 
 export default function Home() {
- 
   return (
     <>
       <Hero />
@@ -161,7 +159,7 @@ export default function Home() {
         <div className=" container mx-auto w-[80%]  flex-col  ">
           {/* Title */}
           <div className="pt-[4rem] text-center">
-            <h2 className="text-white text-5xl pt-4">
+            <h2 className="text-white text-3xl md:text-5xl pt-4">
               <span className="text-orange-400 mr-2">April</span>2023 Trades
               Taken
             </h2>
@@ -185,7 +183,7 @@ export default function Home() {
         <div className=" container mx-auto w-[80%]  flex-col  ">
           {/* Title */}
           <div className="pt-[4rem] text-center">
-            <h2 className="text-white text-5xl pt-4">
+            <h2 className="text-white text-3xl md:text-5xl pt-4">
               <span className="text-orange-400 mr-2">May</span>2023 Trades Taken
             </h2>
           </div>
@@ -205,16 +203,16 @@ export default function Home() {
       </div>
       {/* Page 7  */}
       <div className="flex-col bg-[#1F2125] h-auto pb-8 w-screen flex-wrap">
-        <div className=" container mx-auto w-[80%]  flex-col  ">
+        <div className=" container mx-auto w-full md:w-[80%]  flex-col  ">
           {/* Title */}
-          <div className="pt-[4rem] mx-auto text-center w-[40%] ">
-            <h2 className="text-white text-5xl pt-4">
+          <div className="pt-[4rem] mx-auto text-center w-full md:w-[40%] ">
+            <h2 className="text-white text-3xl md:text-5xl pt-4">
               Here's what our{' '}
               <span className="text-orange-400 mr-2">Network</span>have to say.
             </h2>
           </div>
           {/* Cards */}
-          <div className=" flex gap-16 flex-wrap w-[80%] pt-8 mx-auto justify-center items-center">
+          <div className=" flex gap-16 flex-wrap w-full md:w-[80%] pt-8 mx-auto justify-center items-center">
             {' '}
             <div className="h-[8rem] w-[16rem] bg-slate-300 rounded-[2rem]"></div>
             <div className="h-[8rem] w-[16rem] bg-slate-300 rounded-[2rem]"></div>
@@ -228,10 +226,10 @@ export default function Home() {
 
       {/* Page 10  */}
       <div className="flex-col bg-[#1F2125] h-auto pb-8 w-screen flex-wrap">
-        <div className=" container mx-auto w-[80%]  flex-col  ">
+        <div className=" container mx-auto w-full md:w-[80%]  flex-col  ">
           {/* Title */}
-          <div className="pt-[4rem] mx-auto text-center w-[40%] ">
-            <h2 className="text-white text-4xl pt-4 p-4">
+          <div className="pt-[4rem] mx-auto text-center w-full md:w-[40%] ">
+            <h2 className="text-white text-3xl md:text-5xl pt-4 p-4">
               <span className="text-orange-400 mr-2">Live</span>Recorded Trades
             </h2>
           </div>
