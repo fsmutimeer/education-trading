@@ -8,8 +8,8 @@ const Footer = () => {
     <footer className="bg-[#1F2125] text-center text-white border-t-2 border-t-gray-600">
       <div className="container  mx-auto pt-6 justify-between w-[80%] ">
         {/* <div className="grid md:grid-cols-2 lg:grid-cols-4 mx-auto"> */}
-        <div className="flex mx-auto justify-between ">
-          <div className="mb-2 text-start justify-start w-[10%]">
+        <div className="grid grid-cols-2 md:grid-cols-3 mx-auto ">
+          <div className="mb-2 text-start items-start md:items-center">
             <ul className="mb-0 list-none">
               <li>
                 <Link href="/" className="text-white capitalize">
@@ -18,7 +18,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="mb-6 text-start w-[20%]">
+          <div className="mb-6 text-start items-start md:items-center ">
             <h5 className="mb-2.5 font-normal text-orange-400">Quick Links</h5>
 
             <ul className="mb-0 list-none">
@@ -49,13 +49,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="p-4 text-center bg-[#1F2125] flex justify-start items-end w-[60%]">
-            Copyright © 2023
-            <a className="text-white" href="https://tailwind-elements.com/">
-              The Trading Room
-            </a>
-          </div>
-          <div className="mb-6 ">
+          <div className="mb-6 flex flex-col items-start md:items-center ">
             <h5 className="mb-2.5 font-normal text-orange-400">Socials</h5>
 
             <ul className="mb-0 list-none">
@@ -66,6 +60,12 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+      </div>
+      <div className="flex justify-center text-center p-4 bg-[#1F2125]">
+        Copyright © 2023
+        <a className="text-white" href="https://tailwind-elements.com/">
+          The Trading Room
+        </a>
       </div>
     </footer>
   );
