@@ -3,12 +3,12 @@ import React from 'react';
 
 const login = () => {
   return (
-    <div className="flex flex-col items-center md:flex-row md:h-screen bg-[#1F2125]">
+    <div className="flex flex-col items-center md:flex-row md:h-screen bg-[#1F2125] pt-12 pb-12">
       <div className="flex items-center justify-center w-full md:w-1/2">
         <Image src="/logo.png" alt="Login Image" width={800} height={600} />
       </div>
       <div className="flex flex-col items-center justify-center w-full md:w-1/4">
-        <div className="w-full max-w-md space-y-8">
+        <div className="w-full p-8 max-w-md space-y-8">
           <div>
             <h1 className="text-2xl font-bold text-white">Welcome back!</h1>
             <p className="mt-2 text-white">Please sign in to your account.</p>
