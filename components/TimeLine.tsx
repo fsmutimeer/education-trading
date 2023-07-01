@@ -16,14 +16,14 @@ const PhaseElement = (props: PhaseProps) => {
       <div className="md:flex items-center md:space-x-4 mb-3">
         <div className="flex items-center space-x-4 md:space-x-2 md:space-x-reverse">
           <div className="flex items-center justify-center w-10 h-10 rounded-full bg-orange-400 shadow md:order-1"></div>
-          <h4 className="font-caveat font-medium text-xl text-white md:w-28">
+          <h4 className="font-caveat font-medium text-xl text-white  md:w-28">
             {props.phase}
           </h4>
         </div>
 
-        <div className=" ml-14 flex gap-4 w-[100%]">
+        <div className=" ml-14 flex gap-4 w-[50%] md:w-[100%]">
           {props.icon}
-          <h4 className="text-orange-400">{props.title}</h4>
+          <h4 className="text-orange-400 ">{props.title}</h4>
         </div>
       </div>
       <div className="bg-transparent p-4 pt-0 ml-[5rem] w-[60%] text-gray-500 shadow md:ml-56 flex-col">
