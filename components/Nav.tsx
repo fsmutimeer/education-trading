@@ -82,7 +82,7 @@ const Nav = () => {
             </Link>
           </ul>
           <button className="md:hidden " onClick={toggleMenu}>
-            <RxHamburgerMenu className="h-[30px] w-[30px] text-white cursor-pointer transition duration-500 ease-in-out" />
+            <RxHamburgerMenu className="h-[30px] w-[30px] mr-7 text-white cursor-pointer transition duration-500 ease-in-out" />
           </button>
           {/* modile screen */}
         </nav>
