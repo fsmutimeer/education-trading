@@ -33,9 +33,9 @@ const Nav = () => {
   useEffect(() => {
     // check the mobile menu
     if (isOpen) {
-      document.body.style['overflow-y'] = 'hidden';
+      document.body.style.overflowY = 'hidden';
     } else {
-      document.body.style['overflow-y'] = 'scroll';
+      document.body.style.overflowY = 'scroll';
     }
 
     const changeBackground = () => {
