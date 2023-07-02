@@ -48,6 +48,8 @@ const Nav = () => {
     window.addEventListener('scroll', changeBackground);
     return () => {
       window.removeEventListener('scroll', changeBackground);
+      document.body.style.overflowY = 'auto';
+
     };
   }, [nav]);
 
