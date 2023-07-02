@@ -51,7 +51,7 @@ const Nav = () => {
       document.body.style.overflowY = 'auto';
 
     };
-  }, [nav]);
+  }, [nav,isOpen]);
 
   return (
     <>
