@@ -1,8 +1,10 @@
-import { Logo } from '@/components';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { RiCloseFill } from 'react-icons/ri';
+import { Logo } from '@/components';
+
 const menu = [
   {
     title: 'home',
@@ -23,6 +25,8 @@ const menu = [
 ];
 
 const Nav = () => {
+  const pathname = usePathname();
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -49,9 +53,8 @@ const Nav = () => {
     return () => {
       window.removeEventListener('scroll', changeBackground);
       document.body.style.overflowY = 'auto';
-
     };
-  }, [nav,isOpen]);
+  }, [nav, isOpen]);
 
   return (
     <>
@@ -77,7 +80,13 @@ const Nav = () => {
               <li key={ele.title}>
                 <Link
                   href={ele.route.toLowerCase()}
-                  className="tracking-widest p-2 text-md active:text-orange-600 font-normal  active:bg-violet-700 "
+                  className={`tracking-widest p-2 text-md active:text-orange-600 font-normal  active:bg-violet-700 
+                  ${
+                    pathname == `${ele.route.toLowerCase()}`
+                      ? 'text-orange-400'
+                      : ''
+                  }
+                  `}
                 >
                   {ele.title.toUpperCase()}
                 </Link>
@@ -111,7 +120,11 @@ const Nav = () => {
                 <Link
                   onClick={toggleMenu}
                   href={ele.route.toLowerCase()}
-                  className="block py-4 px-4 tracking-widest text-sm font-normal border-b-[1px] border-gray-400"
+                  className={`block py-4 px-4 tracking-widest text-sm font-normal border-b-[1px] border-gray-400 ${
+                    pathname == `${ele.route.toLowerCase()}`
+                      ? 'text-orange-400'
+                      : ''
+                  }`}
                 >
                   {ele.title.toUpperCase()}
                 </Link>
