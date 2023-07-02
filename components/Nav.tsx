@@ -31,6 +31,13 @@ const Nav = () => {
 
   const [nav, setNav] = useState(false);
   useEffect(() => {
+    // check the mobile menu
+    if (isOpen) {
+      document.body.style['overflow-y'] = 'hidden';
+    } else {
+      document.body.style['overflow-y'] = 'scroll';
+    }
+
     const changeBackground = () => {
       if (window.scrollY >= 80) {
         setNav(true);
@@ -88,7 +95,7 @@ const Nav = () => {
         </nav>
       </div>
       {isOpen && (
-        <div className="md:hidden bg-[#2C2F34] absolute inset-y-0 w-full z-30">
+        <div className="md:hidden bg-[#2C2F34] fixed inset-y-0 w-full z-30">
           <div className="flex justify-end p-8">
             <RiCloseFill
               onClick={toggleMenu}
