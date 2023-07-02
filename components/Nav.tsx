@@ -36,11 +36,18 @@ const Nav = () => {
   const [nav, setNav] = useState(false);
   useEffect(() => {
     // check the mobile menu
-    if (isOpen) {
-      document.body.style.overflowY = 'hidden';
-    } else {
-      document.body.style.overflowY = 'scroll';
-    }
+    // if (isOpen) {
+    //   document.body.style.overflowY = 'hidden';
+    // } else {
+    //   document.body.style.overflowY = 'scroll';
+    // }
+    const handleWindowResize = () => {
+      if (window.innerWidth >= 767) {
+        document.body.style.overflowY = 'auto';
+      } else {
+        document.body.style.overflowY = isOpen ? 'hidden' : 'scroll';
+      }
+    };
 
     const changeBackground = () => {
       if (window.scrollY >= 80) {
@@ -49,10 +56,16 @@ const Nav = () => {
         setNav(false);
       }
     };
+    handleWindowResize();
+
     window.addEventListener('scroll', changeBackground);
+    window.addEventListener('resize', handleWindowResize);
+
     return () => {
       window.removeEventListener('scroll', changeBackground);
-      document.body.style.overflowY = 'auto';
+      window.removeEventListener('resize', handleWindowResize);
+
+      // document.body.style.overflowY = 'scroll';
     };
   }, [nav, isOpen]);
 
