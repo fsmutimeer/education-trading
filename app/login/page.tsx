@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const login = () => {
@@ -42,12 +43,13 @@ const login = () => {
               />
             </div>
             <div>
-              <button
-                type="submit"
+              <Link
+              href='/account/program'
+                // type="submit"
                 className="w-full px-4 py-3 font-bold text-white bg-gray-500 rounded-md hover:bg-gray-600 focus:outline-none focus:shadow-outline-indigo focus:border-gray-700"
               >
                 Log In
-              </button>
+              </Link>
             </div>
           </form>
         </div>

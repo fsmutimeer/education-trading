@@ -25,8 +25,8 @@ export default function Program() {
   ]);
   return (
     <>
-      <div className="flex-col bg-[#1F2125] h-auto pb-8 w-screen">
-        <div className=" container  mx-auto w-[80%] flex gap-8  ">
+      <div className="flex-col bg-[#1F2125] h-auto pb-8 w-screen ">
+        <div className=" container  mx-auto w-[80%] flex gap-8  pt-[10rem]">
           {/* Left */}
           <div className="flex w-[70%] flex-wrap">
             <div className="flex justify-between items-center w-[100%] flex-wrap">
