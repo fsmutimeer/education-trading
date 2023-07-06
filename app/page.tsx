@@ -216,7 +216,7 @@ export default function Home() {
             <figure className="md:flex bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
               <Image
                 className="w-24 h-24  rounded-full mx-auto"
-                src="/about.jpg"
+                src="/about.JPG"
                 alt=""
                 width="384"
                 height="512"
