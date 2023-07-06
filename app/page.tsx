@@ -203,37 +203,101 @@ export default function Home() {
       </div>
       {/* Page 7  */}
       <div className="flex-col bg-[#1F2125] h-auto pb-8 w-screen flex-wrap">
-        <div className=" container mx-auto w-full md:w-[80%]  flex-col  ">
+        <div className=" container mx-auto w-full  ">
           {/* Title */}
           <div className="pt-[4rem] mx-auto text-center w-full  ">
-            <h2 className="text-white text-xl md:text-5xl pt-4">
+            <h2 className="text-gray-200 text-xl md:text-3xl pt-4">
               Here's what our students have to say..
             </h2>
           </div>
           {/* Cards */}
-          <div className=" flex gap-16 flex-wrap w-full md:w-[80%] pt-8 mx-auto justify-center items-center">
+          <div className=" grid grid-cols-1 md:grid-cols-3 gap-8 p-8 w-full  pt-8 mx-auto justify-center items-center">
             {' '}
-            <figure className="md:flex bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
-              <Image
-                className="w-24 h-24  rounded-full mx-auto"
-                src="/about.JPG"
-                alt=""
-                width="384"
-                height="512"
-              />
-              <div className="pt-6 md:p-8 text-center space-y-4">
-                <blockquote>
-                  <p className="text-lg font-medium">
-                    This section is under development, and will be available
-                    soon! Thanks for understanding...
-                  </p>
-                </blockquote>
-                <figcaption className="font-medium">
-                  <div className="text-sky-500 dark:text-sky-400">Jhon Doe</div>
-                  <div className="text-slate-700 dark:text-slate-500">
-                    Falcon Fx Student -
+            <figure className="flex-col bg-[#2C2F34] rounded-xl p-4 dark:bg-[#2C2F34] ">
+              <div className="flex">
+                <Image
+                  className="w-16 h-16 rounded-full"
+                  src="/about.JPG"
+                  alt=""
+                  width="384"
+                  height="512"
+                />
+                <figcaption className="font-medium p-3">
+                  <div className="text-orange-400 text-sm dark:text-orange-400">
+                    Feroz S. Mutimeer
+                  </div>
+                  <div className="text-slate-100 text-sm  dark:text-slate-100">
+                    Software Engineer
                   </div>
                 </figcaption>
+              </div>
+
+              <div className="pt-6 space-y-4">
+                <blockquote>
+                  <p className="text-sm text-gray-200 italic">
+                    “Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Totam, repellendus nesciunt necessitatibus adipisci officiis
+                    est praesentium saepe. Ex, minus laudantium?”
+                  </p>
+                </blockquote>
+              </div>
+            </figure>
+            <figure className="flex-col bg-[#2C2F34] rounded-xl p-4 dark:bg-[#2C2F34] ">
+              <div className="flex">
+                <Image
+                  className="w-16 h-16 rounded-full"
+                  src="/about.JPG"
+                  alt=""
+                  width="384"
+                  height="512"
+                />
+                <figcaption className="font-medium p-3">
+                  <div className="text-orange-400 text-sm dark:text-orange-400">
+                    Feroz S. Mutimeer
+                  </div>
+                  <div className="text-slate-100 text-sm  dark:text-slate-100">
+                    Software Engineer
+                  </div>
+                </figcaption>
+              </div>
+
+              <div className="pt-6 space-y-4">
+                <blockquote>
+                  <p className="text-sm text-gray-200 italic">
+                    “Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Recusandae adipisci ipsum deleniti veniam nam dolores
+                    voluptatum eveniet excepturi necessitatibus porro!”
+                  </p>
+                </blockquote>
+              </div>
+            </figure>
+            <figure className="flex-col bg-[#2C2F34] rounded-xl p-4 dark:bg-[#2C2F34] ">
+              <div className="flex">
+                <Image
+                  className="w-16 h-16 rounded-full"
+                  src="/about.JPG"
+                  alt=""
+                  width="384"
+                  height="512"
+                />
+                <figcaption className="font-medium p-3">
+                  <div className="text-orange-400 text-sm dark:text-orange-400">
+                    Feroz S. Mutimeer
+                  </div>
+                  <div className="text-slate-100 text-sm  dark:text-slate-100">
+                    Software Engineer
+                  </div>
+                </figcaption>
+              </div>
+
+              <div className="pt-6 space-y-4">
+                <blockquote>
+                  <p className="text-sm text-gray-200 italic">
+                    “Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Corporis perferendis quibusdam veritatis repellat eius
+                    repellendus illo veniam quod fugiat unde.”
+                  </p>
+                </blockquote>
               </div>
             </figure>
           </div>
