@@ -23,7 +23,7 @@ const join = () => {
           </div>
           {/* Cards */}
           {/* <div className=" flex gap-10 flex-wrap pt-8 mx-auto justify-center items-center"> */}
-          <div className="grid grid-cols-1 md:grid-cols-3 p-12 ">
+          <div className="grid grid-cols-1 md:grid-cols-3 p-12 gap-8">
             {/* Card one */}
             <div
               style={cardStyle}
