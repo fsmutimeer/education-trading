@@ -1,7 +1,19 @@
-import React from 'react';
+"use client"
+import { PaymentModal } from "@/components";
+import React, { useState } from "react";
+
 import { FaCheck, FaPlus } from 'react-icons/fa';
 
 const join = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
   const cardStyle = {
     display: 'flex',
     alignItems: 'center',
@@ -36,7 +48,7 @@ const join = () => {
                 <h4 className="text-white text-3xl font-bold p-2">£97</h4>
                 <p className="text-sm text-gray-100">Billed Monthly </p>
               </div>
-              <button className=" text-md bg-orange-400  text-white  pt-2 pb-2 p-4 w-[65%] md:w-[80%] m-4  rounded-md">
+              <button onClick={openModal} className=" text-md bg-orange-400  text-white  pt-2 pb-2 p-4 w-[65%] md:w-[80%] m-4  rounded-md">
                 Select Plan
               </button>
               <div className="">
@@ -98,7 +110,7 @@ const join = () => {
                 <h4 className="text-white text-3xl font-bold p-2">£247</h4>
                 <p className="text-sm text-gray-100">Billed Quarterly </p>
               </div>
-              <button className=" text-md bg-orange-400  text-white  pt-2 pb-2 p-4 w-[65%] md:w-[80%] m-4  rounded-md">
+              <button onClick={openModal} className=" text-md bg-orange-400  text-white  pt-2 pb-2 p-4 w-[65%] md:w-[80%] m-4  rounded-md">
                 Select Plan
               </button>
               <div className="">
@@ -166,7 +178,7 @@ const join = () => {
                 <h4 className="text-white text-3xl font-bold p-2">£970</h4>
                 <p className="text-sm text-gray-100">Billed Annually </p>
               </div>
-              <button className=" text-md bg-orange-400  text-white  pt-2 pb-2 p-4 w-[65%] md:w-[80%] m-4  rounded-md">
+              <button onClick={openModal} className=" text-md bg-orange-400  text-white  pt-2 pb-2 p-4 w-[65%] md:w-[80%] m-4  rounded-md">
                 Select Plan
               </button>
               <div className="">
@@ -224,6 +236,7 @@ const join = () => {
           </div>
         </div>
       </div>
+      {showModal && <PaymentModal onClose={closeModal} />}
       {/* <div className="flex-col bg-[#1F2125] h-auto w-screen flex-wrap">
         <div className=" container mx-auto w-[80%]  flex-col  ">
 

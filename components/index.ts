@@ -8,6 +8,7 @@ import Footer from './Footer';
 import Accordion from "./Accordion";
 import TimeLine from "./TimeLine";
 import FaqAccordion from "./FaqAccordion";
+import PaymentModal from './Join/PaymentModal'
 
 export{
   Hero,
@@ -18,5 +19,6 @@ export{
   Footer,
   Accordion,
   TimeLine,
-  FaqAccordion
+  FaqAccordion,
+  PaymentModal
 }
