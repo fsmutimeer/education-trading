@@ -205,21 +205,37 @@ export default function Home() {
       <div className="flex-col bg-[#1F2125] h-auto pb-8 w-screen flex-wrap">
         <div className=" container mx-auto w-full md:w-[80%]  flex-col  ">
           {/* Title */}
-          <div className="pt-[4rem] mx-auto text-center w-full md:w-[40%] ">
-            <h2 className="text-white text-3xl md:text-5xl pt-4">
-              Here's what our{' '}
-              <span className="text-orange-400 mr-2">Network</span>have to say.
+          <div className="pt-[4rem] mx-auto text-center w-full  ">
+            <h2 className="text-white text-xl md:text-5xl pt-4">
+              Here's what our students have to say..
             </h2>
           </div>
           {/* Cards */}
           <div className=" flex gap-16 flex-wrap w-full md:w-[80%] pt-8 mx-auto justify-center items-center">
             {' '}
-            <div className="h-[8rem] w-[16rem] bg-slate-300 rounded-[2rem]"></div>
-            <div className="h-[8rem] w-[16rem] bg-slate-300 rounded-[2rem]"></div>
-            <div className="h-[8rem] w-[16rem] bg-slate-300 rounded-[2rem]"></div>
-            <div className="h-[8rem] w-[16rem] bg-slate-300 rounded-[2rem]"></div>
-            <div className="h-[8rem] w-[16rem] bg-slate-300 rounded-[2rem]"></div>
-            <div className="h-[8rem] w-[16rem] bg-slate-300 rounded-[2rem]"></div>
+            <figure className="md:flex bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
+              <Image
+                className="w-24 h-24  rounded-full mx-auto"
+                src="/about.jpg"
+                alt=""
+                width="384"
+                height="512"
+              />
+              <div className="pt-6 md:p-8 text-center space-y-4">
+                <blockquote>
+                  <p className="text-lg font-medium">
+                    This section is under development, and will be available
+                    soon! Thanks for understanding...
+                  </p>
+                </blockquote>
+                <figcaption className="font-medium">
+                  <div className="text-sky-500 dark:text-sky-400">Jhon Doe</div>
+                  <div className="text-slate-700 dark:text-slate-500">
+                    Falcon Fx Student -
+                  </div>
+                </figcaption>
+              </div>
+            </figure>
           </div>
         </div>
       </div>
