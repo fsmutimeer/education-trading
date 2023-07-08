@@ -1,4 +1,3 @@
-'use client';
 import './dashboard.css';
 export const metadata = {
   title: 'Dashboard',
