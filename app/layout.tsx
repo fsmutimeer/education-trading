@@ -1,8 +1,10 @@
 'use client';
+import { usePathname } from 'next/navigation';
 import './globals.css';
 import { Footer, Nav } from '@/components';
 import { Inter } from 'next/font/google';
-
+import DashboardLayout from './dashboard/layout';
+import { Header, Sidebar } from '@/components/dashboard';
 const inter = Inter({ subsets: ['latin'] });
 
 // export const metadata = {
@@ -15,9 +17,22 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
+  if (pathname.startsWith('/dashboard')) {
+    return (
+      <html lang="en">
+        <body>
+          <Header />
+          <DashboardLayout>
+            <Sidebar />
+            {children}
+          </DashboardLayout>
+        </body>
+      </html>
+    );
+  }
   return (
     <html lang="en">
-      {/* <body className={inter.className}>{children}</body> */}
       <body>
         <Nav />
         <main className="mt-[-80px]">{children}</main>

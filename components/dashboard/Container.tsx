@@ -2,8 +2,8 @@ import React from 'react';
 
 const Container = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex-col bg-[#1F2125] h-auto pb-8 w-screen ">
-      <div className=" container  mx-auto w-[80%]  pt-[10rem]">{children}</div>
+    <div className="bg-[#1F2125] min-h-screen pb-8">
+      <div className="container mx-auto px-8 py-10">{children}</div>
     </div>
   );
 };

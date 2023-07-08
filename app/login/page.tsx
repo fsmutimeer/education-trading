@@ -44,7 +44,7 @@ const login = () => {
             </div>
             <div>
               <Link
-              href='/account/program'
+              href='/dashboard'
                 // type="submit"
                 className="w-full px-4 py-3 font-bold text-white bg-gray-500 rounded-md hover:bg-gray-600 focus:outline-none focus:shadow-outline-indigo focus:border-gray-700"
               >
