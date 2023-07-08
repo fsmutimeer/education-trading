@@ -1,4 +1,5 @@
 import './dashboard.css';
+// set
 export const metadata = {
   title: 'Dashboard',
   description: 'My Dashboard',
