@@ -46,12 +46,12 @@ const Sidebar = () => {
   return (
     <div
       className={`fixed top-0 left-0 h-screen z-30 ${
-        isExpanded ? 'w-[250px] md:w-[300px]' : 'w-[50px] md:w-[80px]'
+        isExpanded ? 'w-[250px]' : 'w-[50px]'
       } bg-gray-900 text-white transition-all duration-600 ease-in-out`}
       style={{ marginTop: '80px' }}
     >
-      <div className="flex items-center justify-between p-4">
-        <div className=""></div>
+      <div className="flex items-center justify-between p-2">
+        {isExpanded && <div className=""></div>}
         <button
           className="text-white focus:outline-none focus:text-white"
           onClick={toggleSidebar}
@@ -64,12 +64,13 @@ const Sidebar = () => {
         </button>
       </div>
 
-      <ul className="flex-col gap- list-none text-gray-200 ml-auto pl-6">
+      <ul className="flex-col gap- list-none text-gray-200 ml-auto pl-2">
         {menu.map((ele) => (
           <li key={ele.title}>
             <Link
+              onClick={toggleSidebar}
               href={ele.route.toLowerCase()}
-              className={`flex gap-8 tracking-widest p-2 text-md  font-normal
+              className={`flex gap-8 tracking-widest pt-2 text-md  font-normal
                   ${
                     pathname == `${ele.route.toLowerCase()}`
                       ? 'text-orange-400'
