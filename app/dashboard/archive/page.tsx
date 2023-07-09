@@ -14,6 +14,15 @@ const Archive = () => {
       statusCount: 100,
     },
     {
+      id: 1,
+      imageSrc: '/1.jpg',
+      titleOrange: 'Forex',
+      titleWhite: 'Program',
+      progressBar: 'bg-blue-500',
+      status: 'Completed',
+      statusCount: 100,
+    },
+    {
       id: 2,
       imageSrc: '/2.jpg',
       titleOrange: 'Indices',
@@ -98,7 +107,7 @@ const Archive = () => {
         <h4 className="text-gray-300 text-2xl md:text-3xl">The Archive</h4>
       </div>
       {/* Archive cards */}
-      <div className="flex flex-wrap pl-4 gap-4 justify-center items-center">
+      <div className="flex  flex-wrap pl-4 gap-4 justify-center items-center">
         {items.map((card) => (
           <ArchiveCard
             key={card.id}
