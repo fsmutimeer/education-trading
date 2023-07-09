@@ -18,17 +18,17 @@ const ArchiveCard: React.FC<ArchiveCardProps> = ({
   statusCount,
 }) => {
   return (
-    <div className="relative bg-green h-[280px]  w-[160px]  rounded-[16px] shadow-lg">
+    <div className="relative bg-green  h-[320px]  w-[170px]  rounded-[16px] shadow-lg">
       <div className=" overflow-hidden">
         <img
           src={imageSrc}
           alt={titleOrange}
-          className="object-cover h-[280px] w-[160px] rounded-[16px]"
+          className="object-cover h-[320px] w-[170px] brightness-50  rounded-[16px] inset-1"
         />
       </div>
       <div className="absolute inset-0 flex flex-wrap overflow-hidden flex-col justify-end p-4">
-        <h3 className="text-md md:text-xl text-orange-400">{titleOrange}</h3>
-        <h3 className="text-md md:text-xl text-white">{titleWhite}</h3>
+        <h3 className="text-xl text-orange-400">{titleOrange}</h3>
+        <h3 className="text-xl text-white">{titleWhite}</h3>
         <div className="h-[15px] w-[40%] bg-gray-400 rounded-md mt-2">
           <div
             className={`h-[15px] rounded-md ${progressBar}`}
