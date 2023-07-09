@@ -107,7 +107,7 @@ const Archive = () => {
         <h4 className="text-gray-300 text-2xl md:text-3xl">The Archive</h4>
       </div>
       {/* Archive cards */}
-      <div className="flex  flex-wrap pl-4 gap-4 justify-center items-center">
+      <div className="flex  flex-wrap pl-4 gap-4 justify-between items-center">
         {items.map((card) => (
           <ArchiveCard
             key={card.id}
