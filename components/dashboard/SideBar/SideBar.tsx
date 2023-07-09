@@ -21,7 +21,7 @@ const Sidebar = () => {
     <div
       className={`fixed top-0 left-0 h-screen z-30 ${
         isExpanded ? 'w-[250px]' : 'w-[1px]'
-      } bg-gray-900 text-white transition-all duration-600 ease-in-out`}
+      } bg-[#1F2125] text-white transition-all duration-600 ease-in-out`}
       style={{ marginTop: '80px' }}
     >
       <div className="flex items-center justify-between p-2">
