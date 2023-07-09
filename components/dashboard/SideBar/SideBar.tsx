@@ -12,27 +12,37 @@ const Sidebar = () => {
     {
       title: 'Dashboard',
       route: '/dashboard',
-      icon: <ImOmega className="text-white h-8 w-8" />,
+      icon: (
+        <ImOmega className="text-white h-8 w-8 hover:text-orange-400  transition-all ease-in-out duration-200" />
+      ),
     },
     {
       title: 'The Archive',
       route: '/dashboard/archive',
-      icon: <FaDollarSign className="text-white h-8 w-8" />,
+      icon: (
+        <FaDollarSign className="text-white h-8 w-8 hover:text-orange-400  transition-all ease-in-out duration-200" />
+      ),
     },
     {
       title: 'Forex',
       route: '/dashboard/forex',
-      icon: <FaBrain className="text-white h-8 w-8" />,
+      icon: (
+        <FaBrain className="text-white h-8 w-8 hover:text-orange-400  transition-all ease-in-out duration-200" />
+      ),
     },
     {
       title: 'Indices',
       route: '/dashboard/indices',
-      icon: <FaBrain className="text-white h-8 w-8" />,
+      icon: (
+        <FaBrain className="text-white h-8 w-8 hover:text-orange-400 transition-all ease-in-out duration-200" />
+      ),
     },
     {
       title: 'Metamorphosis',
       route: '/dashboard/metamorposis',
-      icon: <RiTrophyFill className="text-white h-8 w-8" />,
+      icon: (
+        <RiTrophyFill className="text-white h-8 w-8 hover:text-orange-400  transition-all ease-in-out duration-200" />
+      ),
     },
   ];
 
@@ -57,20 +67,19 @@ const Sidebar = () => {
           onClick={toggleSidebar}
         >
           {isExpanded ? (
-            <FiChevronLeft className="text-white h-8 w-8" />
+            <FiChevronLeft className="text-white h-8 w-8 hover:text-orange-400  transition-all ease-in-out duration-200" />
           ) : (
-            <FiChevronRight className="text-white h-8 w-8 flex-1" />
+            <FiChevronRight className="text-white h-8 w-8 hover:text-orange-400  transition-all ease-in-out duration-200 flex-1 " />
           )}
         </button>
       </div>
-
       <ul className="flex-col gap- list-none text-gray-200 ml-auto pl-2">
         {menu.map((ele) => (
           <li key={ele.title}>
             <Link
               onClick={toggleSidebar}
               href={ele.route.toLowerCase()}
-              className={`flex gap-8 tracking-widest pt-2 text-md  font-normal
+              className={`flex gap-8 tracking-widest pt-2 text-md  font-normal hover:text-orange-400  transition-all ease-in-out duration-200
                   ${
                     pathname == `${ele.route.toLowerCase()}`
                       ? 'text-orange-400'

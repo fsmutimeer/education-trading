@@ -1,6 +1,6 @@
-"use client"
-import { PaymentModal } from "@/components";
-import React, { useState } from "react";
+'use client';
+import { PaymentModal } from '@/components';
+import React, { useState } from 'react';
 
 import { FaCheck, FaPlus } from 'react-icons/fa';
 
@@ -24,7 +24,9 @@ const join = () => {
         <div className=" container mx-auto w-[80%]  flex-col  ">
           {/* Title */}
           <div className="pt-[4rem] mx-auto text-center  ">
-            <h2 className="text-white text-2xl md:text-5xl pt-4">Membership Plans</h2>
+            <h2 className="text-white text-2xl md:text-5xl pt-4">
+              Membership Plans
+            </h2>
             <div className="flex justify-center items-center]">
               <div className="bg-slate-500 h-[1px] w-[15em] my-4 "></div>
             </div>
@@ -35,20 +37,25 @@ const join = () => {
           </div>
           {/* Cards */}
           {/* <div className=" flex gap-10 flex-wrap pt-8 mx-auto justify-center items-center"> */}
-          <div className="grid grid-cols-1 md:grid-cols-3 p-1 md:p-12 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3   p-1 md:p-12 gap-8">
             {/* Card one */}
             <div
               style={cardStyle}
-              className="flex-col border border-orange-400 rounded-md p-0 md:p-4 w-full md:w-[22rem] "
+              className="flex-col border  border-orange-400 rounded-md p-0 md:p-4 w-full md:w-[22rem] "
             >
               <div className="flex-col justify-center items-center text-center">
                 <h4 className="text-white text-2xl border-b-2 border-gray-400 p-4 w-full">
                   Pro - Monthly
                 </h4>
-                <h4 className="text-white text-xl md:text-3xl font-bold p-2">£97</h4>
+                <h4 className="text-white text-xl md:text-3xl font-bold p-2">
+                  £97
+                </h4>
                 <p className="text-sm text-gray-100">Billed Monthly </p>
               </div>
-              <button onClick={openModal} className=" text-md bg-orange-400  text-white  pt-2 pb-2 p-4 w-[65%] md:w-[80%] m-4  rounded-md">
+              <button
+                onClick={openModal}
+                className=" text-md bg-orange-400  text-white  pt-2 pb-2 p-4 w-[65%] md:w-[80%] m-4  rounded-md"
+              >
                 Select Plan
               </button>
               <div className="">
@@ -107,10 +114,15 @@ const join = () => {
                 <h4 className="text-white text-2xl border-b-2 border-gray-400 p-4 w-full">
                   Pro - Quarterly
                 </h4>
-                <h4 className="text-white text-xl md:text-3xl font-bold p-2">£247</h4>
+                <h4 className="text-white text-xl md:text-3xl font-bold p-2">
+                  £247
+                </h4>
                 <p className="text-sm text-gray-100">Billed Quarterly </p>
               </div>
-              <button onClick={openModal} className=" text-md bg-orange-400  text-white  pt-2 pb-2 p-4 w-[65%] md:w-[80%] m-4  rounded-md">
+              <button
+                onClick={openModal}
+                className=" text-md bg-orange-400  text-white  pt-2 pb-2 p-4 w-[65%] md:w-[80%] m-4  rounded-md"
+              >
                 Select Plan
               </button>
               <div className="">
@@ -175,10 +187,15 @@ const join = () => {
                 <h4 className="text-white text-2xl border-b-2 border-gray-400 p-4 w-full">
                   Pro - Annually
                 </h4>
-                <h4 className="text-white text-xl md:text-3xl font-bold p-2">£970</h4>
+                <h4 className="text-white text-xl md:text-3xl font-bold p-2">
+                  £970
+                </h4>
                 <p className="text-sm text-gray-100">Billed Annually </p>
               </div>
-              <button onClick={openModal} className=" text-md bg-orange-400  text-white  pt-2 pb-2 p-4 w-[65%] md:w-[80%] m-4  rounded-md">
+              <button
+                onClick={openModal}
+                className=" text-md bg-orange-400  text-white  pt-2 pb-2 p-4 w-[65%] md:w-[80%] m-4  rounded-md"
+              >
                 Select Plan
               </button>
               <div className="">

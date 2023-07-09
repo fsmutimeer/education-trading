@@ -4,6 +4,7 @@ import React from 'react';
 import { BiChevronDown, BiUser } from 'react-icons/bi';
 import { FaChevronCircleDown } from 'react-icons/fa';
 import { ImOmega } from 'react-icons/im';
+import { ProfileDropDown } from '..';
 
 const Header = () => {
   return (
@@ -16,16 +17,15 @@ const Header = () => {
           </Link>
           <div className="h-[80px] w-[1.5px] bg-gray-600"></div>
         </div>
-        <div className="flex justify-between items-center w-[10%]">
-          <div className="h-[80px] w-[1.5px] bg-gray-600"></div>
+        <div className="flex justify-between items-center w-[50%] md:w-[20%] pr-12 md:pr-8">
+          <div className="hidden md:block h-[80px] w-[1.5px] bg-gray-600"></div>
           <ImOmega className="text-white h-[20px] w-[20px] " />
           <div className="flex items-center w-[50%]">
-            <BiUser className="text-white h-[20px] w-[20px]" />
-            <BiChevronDown className="text-gray-50 h-[20px] w-[20px]" />
+            <ProfileDropDown />
           </div>
         </div>
+        {/* For user profile */}
       </nav>
-    
     </header>
   );
 };
