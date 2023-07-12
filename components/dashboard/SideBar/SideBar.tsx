@@ -49,9 +49,9 @@ const Sidebar = () => {
         )}
         <Link
           onClick={toggleSidebar}
-          href="/dashboard/archive"
+          href="/dashboard"
           className={`flex gap-8 tracking-widest pt-2 text-md  font-normal hover:text-orange-400  transition-all ease-in-out duration-200
-              ${pathname == `/dashboard/archive` ? 'text-orange-400' : ''}
+              ${pathname == `/dashboard` ? 'text-orange-400' : ''}
               `}
         >
           {isExpanded ? (

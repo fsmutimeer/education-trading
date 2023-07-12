@@ -5,7 +5,6 @@ import Logo from "./Logo";
 import Container from "./Container";
 import Card from "./Card";
 import Footer from './Footer';
-import Accordion from "./Accordion";
 import TimeLine from "./TimeLine";
 import FaqAccordion from "./FaqAccordion";
 import PaymentModal from './Join/PaymentModal'
@@ -17,7 +16,6 @@ export{
   Container,
   Card,
   Footer,
-  Accordion,
   TimeLine,
   FaqAccordion,
   PaymentModal

@@ -4,7 +4,9 @@ import WelcomeCard from "./Archive/WelcomeCard";
 import ArchiveCard from './Archive/ArchiveCard'
 import Container from "./Container";
 import ProfileDropDown from './Header/ProfileDropDown'
-import VideoPlayer from './VideoPlayer'
+import Accordion from './PlayList/Accordion';
+import PlayVideo from "./PlayList/PlayVideo";
+import PlayList from "./PlayList/PlayList";
 export{
   Header,
   ProfileDropDown,
@@ -12,6 +14,7 @@ export{
   Container,
   WelcomeCard,
   ArchiveCard,
-  VideoPlayer
-  
+  Accordion,
+  PlayVideo,
+  PlayList,
 }
