@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { ArchiveCard, WelcomeCard } from '@/components/dashboard';
 import { Container } from '@/components';
+import Link from 'next/link';
 
 interface VideoSection {
   title: string;
@@ -11,7 +12,6 @@ interface VideoSection {
 
 const page = () => {
   const items = [
-  
     {
       id: 1,
       imageSrc: '/1.jpg',
@@ -20,6 +20,7 @@ const page = () => {
       progressBar: 'bg-blue-500',
       status: 'Completed',
       statusCount: 100,
+      url: '/dashboard/forex',
     },
     {
       id: 2,
@@ -29,6 +30,7 @@ const page = () => {
       progressBar: 'bg-yellow-500',
       status: 'In Progress',
       statusCount: 50,
+      url: '/dashboard/indices',
     },
     {
       id: 3,
@@ -38,6 +40,7 @@ const page = () => {
       progressBar: 'bg-green-500',
       status: 'Started',
       statusCount: 40,
+      url: '/dashboard/metamorphosis',
     },
     {
       id: 4,
@@ -47,7 +50,8 @@ const page = () => {
       progressBar: 'bg-red-500',
       status: 'Not Started',
       statusCount: 200,
-    }
+      url: '/dashboard/mastery',
+    },
   ];
 
   return (
@@ -63,15 +67,17 @@ const page = () => {
       {/* Archive cards */}
       <div className="flex  flex-wrap pl-4 gap-4 justify-between items-center">
         {items.map((card) => (
-          <ArchiveCard
-            key={card.id}
-            imageSrc={card.imageSrc}
-            titleOrange={card.titleOrange}
-            titleWhite={card.titleWhite}
-            progressBar={card.progressBar}
-            status={card.status}
-            statusCount={card.statusCount}
-          />
+          <Link className="cursor-pointer" href={card.url}>
+            <ArchiveCard
+              key={card.id}
+              imageSrc={card.imageSrc}
+              titleOrange={card.titleOrange}
+              titleWhite={card.titleWhite}
+              progressBar={card.progressBar}
+              status={card.status}
+              statusCount={card.statusCount}
+            />
+          </Link>
         ))}
       </div>
     </Container>

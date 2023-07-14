@@ -87,9 +87,9 @@ const Sidebar = () => {
         </Link>
         <Link
           onClick={toggleSidebar}
-          href="/dashboard/forex"
+          href="/dashboard/indices"
           className={`flex gap-8 tracking-widest pt-2 text-md  font-normal hover:text-orange-400  transition-all ease-in-out duration-200
-              ${pathname == `/dashboard/forex` ? 'text-orange-400' : ''}
+              ${pathname == `/dashboard/indices` ? 'text-orange-400' : ''}
               `}
         >
           {isExpanded ? (
@@ -103,9 +103,9 @@ const Sidebar = () => {
         </Link>
         <Link
           onClick={toggleSidebar}
-          href="/dashboard/forex"
+          href="/dashboard/metamorphosis"
           className={`flex gap-8 tracking-widest pt-2 text-md  font-normal hover:text-orange-400  transition-all ease-in-out duration-200
-              ${pathname == `/dashboard/forex` ? 'text-orange-400' : ''}
+              ${pathname == `/dashboard/metamorphosis` ? 'text-orange-400' : ''}
               `}
         >
           {isExpanded ? (
@@ -119,9 +119,9 @@ const Sidebar = () => {
         </Link>
         <Link
           onClick={toggleSidebar}
-          href="/dashboard/forex"
+          href="/dashboard/mastery"
           className={`flex gap-8 tracking-widest pt-2 text-md  font-normal hover:text-orange-400  transition-all ease-in-out duration-200
-              ${pathname == `/dashboard/forex` ? 'text-orange-400' : ''}
+              ${pathname == `/dashboard/mastery` ? 'text-orange-400' : ''}
               `}
         >
           {isExpanded ? (
