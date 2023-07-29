@@ -1,16 +1,16 @@
 'use client';
 import Link from 'next/link';
-import React, { useState ,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaChevronDown, FaUserCircle } from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
-import { UserProfile } from '@/app/api/types';
+import { User } from '@/app/api/types';
 import { getUserProfile } from '@/app/api/api';
 
 
 const DropdownMenu = () => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
-  const [authenticatedUser, setAuthenticatedUser] = useState<UserProfile | null>(null);
+  const [authenticatedUser, setAuthenticatedUser] = useState<User | null>(null);
 
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const DropdownMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  const logout= ()=> {
+  const logout = () => {
     localStorage.removeItem("jwtToken")
     router.push("/")
   }
@@ -37,7 +37,7 @@ const DropdownMenu = () => {
         >
           <FaUserCircle className="h-6 w-6 hover:text-orange-400 transition-all duration-300" />
           <p>{authenticatedUser?.username}</p>
-          <FaChevronDown className='hover:text-orange-400 transition-all duration-300'/>
+          <FaChevronDown className='hover:text-orange-400 transition-all duration-300' />
         </section>
       </div>
 

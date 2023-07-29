@@ -1,7 +1,5 @@
 'use client'
-import PlaylistComponent, {
-  AccordionData,
-} from '@/components/dashboard/PlaylistComponent';
+import PlaylistComponent from '@/components/dashboard/PlaylistComponent';
 import useAuth from '@/app/auth/useAuth';
 import useLectures from '@/app/api/hooks/useLectures';
 const PageName = 'metamorphosis'

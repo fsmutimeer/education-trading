@@ -1,5 +1,5 @@
 'use client';
-import { AccordionData, AccordionProps, OverviewProps, PlaylistComponentProps, VideoData } from '@/app/api/types';
+import { AccordionProps, OverviewProps, PlaylistComponentProps, VideoData } from '@/app/api/types';
 import { Container } from '@/components';
 import Image from 'next/image';
 import React, { useState } from 'react';
