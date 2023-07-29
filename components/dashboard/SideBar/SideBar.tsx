@@ -8,6 +8,8 @@ import { ImOmega } from 'react-icons/im';
 import { SiMarketo } from 'react-icons/si';
 import { BsSpeedometer2 } from 'react-icons/bs';
 import { GiDiamondTrophy } from 'react-icons/gi';
+import { RxHamburgerMenu } from 'react-icons/rx';
+import { VscClose } from 'react-icons/vsc'
 
 const Sidebar = () => {
   const pathname = usePathname();
@@ -19,9 +21,8 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 h-screen z-30 ${
-        isExpanded ? 'w-[250px]' : 'w-[1px]'
-      } bg-[#1F2125] text-white transition-all duration-600 ease-in-out`}
+      className={`fixed top-0 left-0 h-screen z-30 ${isExpanded ? 'w-[250px]' : 'w-[1px]'
+        } bg-[#1F2125] text-white transition-all duration-600 ease-in-out`}
       style={{ marginTop: '80px' }}
     >
       <div className="flex items-center justify-between p-2">
@@ -31,11 +32,10 @@ const Sidebar = () => {
           onClick={toggleSidebar}
         >
           {isExpanded ? (
-            <FiChevronLeft className="text-white h-8 w-8 hover:text-orange-400  transition-all ease-in-out duration-200" />
+            <VscClose className="text-white h-8 w-8 hover:text-orange-400  transition-all ease-in-out duration-200 flex-1 " />
           ) : (
             <span className="flex justify-center text-center text-orange-400 hover:text-orange-600 transition-all ease-in-out duration-300  text-md font-bold">
-              Menu
-              <FiChevronRight className="text-white h-8 w-8 hover:text-orange-400  transition-all ease-in-out duration-200 flex-1 " />
+              <RxHamburgerMenu className='text-white h-8 w-8 hover:text-orange-400' />
             </span>
           )}
         </button>

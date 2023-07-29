@@ -1,5 +1,6 @@
+'use client'
 import { useEffect, useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { RiCloseFill } from 'react-icons/ri';
@@ -25,9 +26,12 @@ const menu = [
 ];
 
 const Nav = () => {
-  const pathname = usePathname();
 
+
+  const pathname = usePathname();
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -35,12 +39,7 @@ const Nav = () => {
 
   const [nav, setNav] = useState(false);
   useEffect(() => {
-    // check the mobile menu
-    // if (isOpen) {
-    //   document.body.style.overflowY = 'hidden';
-    // } else {
-    //   document.body.style.overflowY = 'scroll';
-    // }
+
     const handleWindowResize = () => {
       if (window.innerWidth >= 767) {
         document.body.style.overflowY = 'auto';
@@ -60,6 +59,7 @@ const Nav = () => {
 
     window.addEventListener('scroll', changeBackground);
     window.addEventListener('resize', handleWindowResize);
+    setIsLoggedIn(!!localStorage.getItem('jwtToken'));
 
     return () => {
       window.removeEventListener('scroll', changeBackground);
@@ -68,6 +68,14 @@ const Nav = () => {
       // document.body.style.overflowY = 'scroll';
     };
   }, [nav, isOpen]);
+
+  const logout = () => {
+    localStorage.removeItem("jwtToken")
+    router.push("/");
+    if (isOpen) {
+      toggleMenu()
+    }
+  }
 
   return (
     <>
@@ -94,23 +102,37 @@ const Nav = () => {
                 <Link
                   href={ele.route.toLowerCase()}
                   className={`tracking-widest p-2 text-md active:text-orange-600 font-normal  active:bg-violet-700 
-                  ${
-                    pathname == `${ele.route.toLowerCase()}`
+                  ${pathname == `${ele.route.toLowerCase()}`
                       ? 'text-orange-400'
                       : ''
-                  }
+                    }
                   `}
                 >
                   {ele.title.toUpperCase()}
                 </Link>
               </li>
             ))}
-            <Link
-              href="/login"
-              className="tracking-widest text-md border bg-white px-4 py-1 text-slate-950 rounded-lg hover:bg-slate-300 hover:text-white"
-            >
-              LOGIN
-            </Link>
+            {isLoggedIn ? (
+              // Show "Go to Dashboard" link if the user is logged in
+              <>
+                <Link
+                  href="/dashboard"
+                  className="tracking-widest text-md bg-orange-400 px-4 py-1 text-slate-950 rounded-lg hover:bg-orange-500  transition-all duration-300 hover:text-whitetransition-all duration-300"
+                >
+                  Dashboard
+                </Link>
+                <p className="text-gray-100 block px-4 py-2 text-sm hover:text-orange-400 transition-all duration-300 cursor-pointer" onClick={logout}>Logout</p>
+              </>
+            ) : (
+              // Show "LOGIN" link if the user is not logged in
+              <Link
+                href="/login"
+                className="tracking-widest text-md border bg-white px-4 py-1 text-slate-950 rounded-lg hover:bg-slate-300 hover:text-white"
+              >
+                LOGIN
+              </Link>)
+            }
+
           </ul>
           <button className="md:hidden " onClick={toggleMenu}>
             <RxHamburgerMenu className="h-[30px] w-[30px] mr-7 text-white cursor-pointer transition duration-500 ease-in-out" />
@@ -133,23 +155,37 @@ const Nav = () => {
                 <Link
                   onClick={toggleMenu}
                   href={ele.route.toLowerCase()}
-                  className={`block py-4 px-4 tracking-widest text-sm font-normal border-b-[1px] border-gray-400 ${
-                    pathname == `${ele.route.toLowerCase()}`
-                      ? 'text-orange-400'
-                      : ''
-                  }`}
+                  className={`block py-4 px-4 tracking-widest text-sm font-normal border-b-[1px] border-gray-400 ${pathname == `${ele.route.toLowerCase()}`
+                    ? 'text-orange-400'
+                    : ''
+                    }`}
                 >
                   {ele.title.toUpperCase()}
                 </Link>
               </li>
             ))}
-            <Link
-              onClick={toggleMenu}
-              href="/login"
-              className="py-2 px-4 max-w-xs text-sm  border bg-white  text-slate-950 rounded-lg"
-            >
-              LOGIN
-            </Link>
+            {isLoggedIn ? (
+              // Show "Go to Dashboard" link if the user is logged in
+              <>
+                <Link
+                  href="/dashboard"
+                  className="tracking-widest text-md bg-orange-400 px-4 py-1 text-slate-950 rounded-lg hover:bg-orange-500  transition-all duration-300 hover:text-whitetransition-all duration-300"
+                >
+                  Dashboard
+                </Link>
+                <p className="text-gray-100 block px-4 py-2 text-sm hover:text-orange-400 transition-all duration-300 cursor-pointer" onClick={logout}>Logout</p>
+              </>
+            ) : (
+              // Show "LOGIN" link if the user is not logged in
+              <Link
+                onClick={toggleMenu}
+                href="/login"
+                className="tracking-widest text-md border bg-white px-4 py-1 text-slate-950 rounded-lg hover:bg-slate-300 hover:text-white"
+              >
+                LOGIN
+              </Link>)
+            }
+
           </ul>
         </div>
       )}

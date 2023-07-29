@@ -1,4 +1,5 @@
 'use client';
+import { AccordionData, AccordionProps, OverviewProps, PlaylistComponentProps, VideoData } from '@/app/api/types';
 import { Container } from '@/components';
 import Image from 'next/image';
 import React, { useState } from 'react';
@@ -7,7 +8,7 @@ import { FaPause, FaPlay } from 'react-icons/fa';
 import { MdOutlineDownloading } from 'react-icons/md';
 
 interface VideoProps {
-  videoFile: string;
+  videoFile: VideoData;
   handleVideoPlay: () => void;
   handleVideoPause: () => void;
 }
@@ -25,14 +26,12 @@ const Video: React.FC<VideoProps> = ({
     autoPlay
     onPlay={handleVideoPlay}
     onPause={handleVideoPause}
-    src={videoFile}
+    onEnded={() => console.log("id is ", videoFile.id)}
+    src={videoFile.videoFile}
   />
+
 );
 
-interface OverviewProps {
-  desc1: string;
-  desc2: string;
-}
 
 const Overview: React.FC<OverviewProps> = ({ desc1, desc2 }) => (
   <div className="flex flex-col mt-4 gap-4">
@@ -68,26 +67,6 @@ const Resources: React.FC = () => (
     </div>
   </div>
 );
-
-export interface AccordionData {
-  title: string;
-  videos: VideoData[];
-  active: number;
-}
-
-interface VideoData {
-  title: string;
-  videoFile: string;
-  duration: string;
-  isActive: boolean;
-}
-
-interface AccordionProps {
-  accordionData: AccordionData[];
-  toggleAccordion: (index: number) => void;
-  handleVideoClick: (video: VideoData) => void;
-  selectedVideo: VideoData;
-}
 
 const Accordion: React.FC<AccordionProps> = ({
   accordionData,
@@ -133,17 +112,6 @@ const Accordion: React.FC<AccordionProps> = ({
   </div>
 );
 
-interface PlaylistComponentProps {
-  img: string;
-  imgDesc: string;
-  weekNumber: string;
-  weekDesc: string;
-  desc1: string;
-  desc2: string;
-  downloadFileName: string;
-  initialPlaylistData: AccordionData[]; // Added prop
-}
-
 const PlaylistComponent: React.FC<PlaylistComponentProps> = ({
   img,
   imgDesc,
@@ -152,7 +120,7 @@ const PlaylistComponent: React.FC<PlaylistComponentProps> = ({
   desc1,
   desc2,
   downloadFileName,
-  initialPlaylistData, // Added prop
+  initialPlaylistData,
 }) => {
   const [accordionData, setAccordionData] = useState(initialPlaylistData);
   const [selectedVideo, setSelectedVideo] = useState(
@@ -174,8 +142,9 @@ const PlaylistComponent: React.FC<PlaylistComponentProps> = ({
         ...v,
         isActive: v === video ? !v.isActive : false,
       })),
-    }));
-
+    }
+    )
+    );
     setAccordionData(updatedData);
     setSelectedVideo(video);
     const videoPlayer = document.getElementById(
@@ -244,7 +213,7 @@ const PlaylistComponent: React.FC<PlaylistComponentProps> = ({
             </div>
           </div>
           <Video
-            videoFile={selectedVideo.videoFile}
+            videoFile={selectedVideo}
             handleVideoPlay={handleVideoPlay}
             handleVideoPause={handleVideoPause}
           />

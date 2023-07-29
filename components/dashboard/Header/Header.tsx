@@ -1,7 +1,7 @@
 import Logo from '@/components/Logo';
 import Link from 'next/link';
 import React from 'react';
-import { BiChevronDown, BiUser } from 'react-icons/bi';
+import { BiChevronDown, BiHome, BiUser } from 'react-icons/bi';
 import { FaChevronCircleDown } from 'react-icons/fa';
 import { ImOmega } from 'react-icons/im';
 import { ProfileDropDown } from '..';
@@ -19,11 +19,14 @@ const Header = () => {
         </div>
         <div className="flex justify-between items-center w-[50%] md:w-[20%] pr-12 md:pr-8">
           <div className="hidden md:block h-[80px] w-[1.5px] bg-gray-600"></div>
+          <Link href="/">   <BiHome className="text-white h-[20px] w-[20px] " /></Link>
+
           <ImOmega className="text-white h-[20px] w-[20px] " />
           <div className="flex items-center w-[50%]">
             <ProfileDropDown />
           </div>
         </div>
+    
         {/* For user profile */}
       </nav>
     </header>

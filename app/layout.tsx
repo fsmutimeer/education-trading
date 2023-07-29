@@ -5,6 +5,10 @@ import { Footer, Nav } from '@/components';
 import { Inter } from 'next/font/google';
 import DashboardLayout from './dashboard/layout';
 import { Header, Sidebar } from '@/components/dashboard';
+import { Provider } from 'react-redux';
+import useAuth from './auth/useAuth';
+import { LOGIN_ROUTE } from './contstants';
+import { useEffect, useState } from 'react';
 const inter = Inter({ subsets: ['latin'] });
 
 // export const metadata = {
@@ -17,7 +21,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
   const pathname = usePathname();
+  // const isAuthenticated = useAuth();
   if (pathname.startsWith('/dashboard')) {
     return (
       <html lang="en">
@@ -31,6 +37,11 @@ export default function RootLayout({
       </html>
     );
   }
+  // else if (typeof window !== 'undefined') {
+  //   window.location.href = "/login";
+  //   return null;
+  // }
+
   return (
     <html lang="en">
       <body>

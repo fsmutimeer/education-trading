@@ -1,14 +1,32 @@
 'use client';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useState ,useEffect} from 'react';
 import { FaChevronDown, FaUserCircle } from 'react-icons/fa';
+import { useRouter } from 'next/navigation';
+import { UserProfile } from '@/app/api/types';
+import { getUserProfile } from '@/app/api/api';
+
 
 const DropdownMenu = () => {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+  const [authenticatedUser, setAuthenticatedUser] = useState<UserProfile | null>(null);
+
+
+  useEffect(() => {
+    getUserProfile(router).then((userProfile) => {
+      setAuthenticatedUser(userProfile);
+    });
+  }, [router])
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const logout= ()=> {
+    localStorage.removeItem("jwtToken")
+    router.push("/")
+  }
 
   return (
     <div className="relative inline-block text-left">
@@ -18,7 +36,7 @@ const DropdownMenu = () => {
           onClick={toggleMenu}
         >
           <FaUserCircle className="h-6 w-6 hover:text-orange-400 transition-all duration-300" />
-          <p>Jhon</p>
+          <p>{authenticatedUser?.username}</p>
           <FaChevronDown className='hover:text-orange-400 transition-all duration-300'/>
         </section>
       </div>
@@ -40,6 +58,7 @@ const DropdownMenu = () => {
             >
               Manage Subscription
             </Link>
+            <p className="text-gray-100 block px-4 py-2 text-sm hover:text-orange-400 transition-all duration-300 cursor-pointer" onClick={logout}>Logout</p>
           </div>
         </div>
       )}

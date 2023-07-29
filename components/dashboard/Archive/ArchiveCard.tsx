@@ -1,44 +1,44 @@
 import React from 'react';
 
 interface ArchiveCardProps {
-  imageSrc: string;
-  titleOrange: string;
-  titleWhite: string;
+  photo: string;
+  name: string;
+  title: string;
   progressBar: string;
   status: string;
-  statusCount: number;
+  completionPercentage: number;
 }
 
 const ArchiveCard: React.FC<ArchiveCardProps> = ({
-  imageSrc,
-  titleOrange,
-  titleWhite,
+  photo,
+  name,
+  title,
   progressBar,
   status,
-  statusCount,
+  completionPercentage,
 }) => {
   return (
     <div className="relative bg-green  h-[400px]  w-[250px] m-2 rounded-[16px] shadow-lg">
       <div className=" overflow-hidden">
         <img
-          src={imageSrc}
-          alt={titleOrange}
+          src={photo}
+          alt={name}
           className="object-cover  h-[400px] w-[250px] brightness-50  rounded-[16px] inset-1"
         />
       </div>
       <div className="absolute inset-0 flex flex-wrap overflow-hidden flex-col justify-end p-4">
-        <h3 className="text-2xl text-orange-400">{titleOrange}</h3>
-        <h3 className="text-2xl text-white">{titleWhite}</h3>
+        <h3 className="text-2xl text-orange-400">{name}</h3>
+        <h3 className="text-2xl text-white">{title}</h3>
         <div className="h-[15px] w-[40%] bg-gray-400 rounded-md mt-2">
           <div
             className={`h-[15px] rounded-md ${progressBar}`}
-            style={{ width: `${statusCount > 100 ? 100 : statusCount}%` }}
+            style={{ width: `${completionPercentage > 100 ? 100 : completionPercentage}%` }}
           ></div>
         </div>
         <p className="text-white">
           {status}{' '}
           <span className="text-orange-400">
-            {statusCount > 100 ? 100 : statusCount}%
+            {completionPercentage > 100 ? 100 : completionPercentage}%
           </span>
         </p>
       </div>
