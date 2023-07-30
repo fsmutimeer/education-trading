@@ -1,8 +1,11 @@
 'use client';
+import { markIsWatched } from '@/app/api/api';
 import { AccordionProps, OverviewProps, PlaylistComponentProps, VideoData } from '@/app/api/types';
 import { Container } from '@/components';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
+import { AiOutlineCheck } from 'react-icons/ai';
 import { BiLockAlt } from 'react-icons/bi';
 import { FaPause, FaPlay } from 'react-icons/fa';
 import { MdOutlineDownloading } from 'react-icons/md';
@@ -17,20 +20,30 @@ const Video: React.FC<VideoProps> = ({
   videoFile,
   handleVideoPlay,
   handleVideoPause,
-}) => (
-  <video
-    id="videoPlayer"
-    className="flex h-[450px] w-full bg-slate-300 mt-8 object-fill"
-    controls
-    muted
-    autoPlay
-    onPlay={handleVideoPlay}
-    onPause={handleVideoPause}
-    onEnded={() => console.log("id is ", videoFile.id)}
-    src={videoFile.videoFile}
-  />
+}) => {
+  const router = useRouter();
+  const handleVideoEnded = async () => {
+    try {
+      await markIsWatched(videoFile.id, router);
+    } catch (error) {
+      console.error('Error marking video as watched:', error);
+    }
+  };
 
-);
+  return (
+    <video
+      id="videoPlayer"
+      className="flex h-[450px] w-full bg-slate-300 mt-8 object-fill"
+      controls
+      muted
+      autoPlay
+      onPlay={handleVideoPlay}
+      onPause={handleVideoPause}
+      onEnded={handleVideoEnded}
+      src={videoFile.videoFile}
+    />
+  );
+};
 
 
 const Overview: React.FC<OverviewProps> = ({ desc1, desc2 }) => (
@@ -88,19 +101,20 @@ const Accordion: React.FC<AccordionProps> = ({
             <div className="font-medium text-lg">{item.title}</div>
           </button>
           {item.active === 1 && (
-            <div className="bg-gray-900 p-4 transition-all ease-in-out duration-500">
+            <div className="bg-orange-400 p-4 transition-all ease-in-out duration-500">
               <ul>
                 {item.videos.map((video, i) => (
                   <li
                     key={i}
                     onClick={() => handleVideoClick(video)}
-                    className="flex items-center mb-2 cursor-pointer"
+                    className="flex items-center mb-2 cursor-pointer justify-between bg-[#1F2125] p-2 rounded-md hover:bg-[#2C2F34] transition-all"
                   >
                     <span className="w-8 h-8 bg-gray-800 rounded-full flex justify-center items-center mr-2">
-                      {video.isActive ? <FaPause /> : <FaPlay />}
+                      <FaPlay className='text-orange-400' />
                     </span>
                     <span>{video.title}</span>
-                    {video.isActive ? '' : <BiLockAlt className="ml-2" />}
+                    {video.isWatched ? <AiOutlineCheck className="ml-2 text-orange-400" /> : <BiLockAlt className="ml-2" />}
+
                   </li>
                 ))}
               </ul>
@@ -188,7 +202,6 @@ const PlaylistComponent: React.FC<PlaylistComponentProps> = ({
       }))
     );
   };
-
   return (
     <Container>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

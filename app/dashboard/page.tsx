@@ -61,13 +61,11 @@ const page = () => {
   const enrollCourseHandler = async (courseId: number) => {
     try {
       await enrollCourse(courseId, router);
-      // Fetch the course details after enrolling to get the complete information
       const courseDetails = await getCourseById(courseId, router,);
       setEnrolledCourse((prevEnrolledCourses: any) => {
         if (prevEnrolledCourses) {
           return [...prevEnrolledCourses, courseDetails];
         } else {
-          // If there are no enrolled courses, create a new list with the new course
           return [courseDetails];
         }
       });
@@ -76,7 +74,6 @@ const page = () => {
         if (prevCourseList) {
           return prevCourseList.filter((course: any) => course.id !== courseId);
         } else {
-          // If there are no courses, create a new list with the new course
           return [courseDetails];
         }
       });
@@ -109,7 +106,7 @@ const page = () => {
           <div className="text-white">Loading...</div>
         ) : enrolledCourse !== undefined && enrolledCourse !== null && enrolledCourse?.length > 0 ? (
           enrolledCourse.map((course) => (
-            course.name ? ( // Check if the name property exists before rendering
+            course.name ? (
               <Link
                 key={course.courseId}
                 className="cursor-pointer"
@@ -124,7 +121,7 @@ const page = () => {
                   completionPercentage={course.completionPercentage}
                 />
               </Link>
-            ) : null // Provide a fallback or skip rendering for courses without a name property
+            ) : null
           ))
         ) : (
           <div className="h-screen" ><h1 className="text-orange-400"> No courses enrolled.</h1></div>

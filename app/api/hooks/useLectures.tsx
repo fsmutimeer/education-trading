@@ -17,9 +17,9 @@ const useLectures = ({ PageName }: UseLecturesProps) => {
     useEffect(() => {
         getCourses(router)
             .then((data) => {
-                const forexCourse = data?.find((item) => item.name.toLowerCase() === PageName);
-                if (forexCourse) {
-                    getCourseLecturesById(forexCourse.id, router)
+                const courseDetails = data?.find((item) => item.name.toLowerCase() === PageName);
+                if (courseDetails) {
+                    getCourseLecturesById(courseDetails.id, router)
                         .then((lecturesData) => {
                             if (lecturesData !== undefined) {
                                 const accordionData: any = lecturesData?.map((lecture: any) => ({
@@ -29,6 +29,7 @@ const useLectures = ({ PageName }: UseLecturesProps) => {
                                         id: video.id,
                                         title: video.name,
                                         duration: video.videoLength,
+                                        isWatched: video.isWatched,
                                         videoFile: video.url,
                                         isActive: false,
                                     })),

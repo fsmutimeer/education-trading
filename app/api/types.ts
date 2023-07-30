@@ -1,4 +1,8 @@
 
+export interface GeneralResponse {
+  message: string;
+  statusCode: number
+}
 export interface CreateUser {
   username: string;
   password: string;
@@ -43,7 +47,8 @@ export interface Video {
   id: number;
   name: string;
   videoLength: number;
-  url: string
+  url: string;
+  isWatched: boolean;
 }
 export interface Lecture {
   id: number;
@@ -68,6 +73,7 @@ export interface VideoData {
   id: number;
   title: string;
   videoFile: string;
+  isWatched: boolean;
   duration: string;
   isActive: boolean;
 }

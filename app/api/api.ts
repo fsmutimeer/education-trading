@@ -1,4 +1,4 @@
-import { Course, CreateLecture, CreateUser, EnrolledCourse, Lecture, Login, UpdateLecture, UpdateUser, User, } from "./types";
+import { Course, CreateLecture, CreateUser, EnrolledCourse, GeneralResponse, Lecture, Login, UpdateLecture, UpdateUser, User, } from "./types";
 
 const BASE_URL = "http://localhost:8888"
 
@@ -46,14 +46,6 @@ export const userLogin = async (
         password,
       }),
     });
-
-    // if (!res.ok) {
-    //   // If the login request fails, parse the error message from the response
-    //   const errorData = await res.json();
-    //   const errorMessage = errorData?.message || 'Login failed';
-    //   throw new Error(errorMessage);
-
-    // }
     return res;
 
   } catch (error: any) {
@@ -616,22 +608,28 @@ export const uploadVideoToLecture = async (
     return null;
   }
 };
-export const setVideoCompleted = async (
-  id: number
-): Promise<any | null> => {
+
+
+export const markIsWatched = async (
+  id: number,
+  router: any
+): Promise<GeneralResponse | null> => {
   try {
 
-    const res = await fetch(`${BASE_URL}/lectures/video/complete/${id}`, {
-      method: 'PATCH',
+    const res = await fetch(`${BASE_URL}/lectures/video/mark-watched/${id}`, {
+      method: 'POST',
       headers: {
         Authorization: 'Bearer ' + localStorage.getItem('jwtToken'),
-      }
+      },
     });
 
-    const result: any = await res.json();
+    if (res.status === 401) {
+      router.push('/login');
+    }
+    const result: GeneralResponse = await res.json();
     return result;
   } catch (error) {
-    console.error('Error setting video complete:', error);
+    console.error('Error adding new lecture:', error);
     return null;
   }
 };
